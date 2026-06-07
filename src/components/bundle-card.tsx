@@ -1,4 +1,6 @@
+import { Ionicons } from '@expo/vector-icons';
 import { Image } from 'expo-image';
+import { LinearGradient } from 'expo-linear-gradient';
 import {
   Pressable,
   StyleSheet,
@@ -29,13 +31,29 @@ export function BundleCard({ bundle }: Props) {
       onPress={() => handlePress(bundle.id)}
       android_ripple={ANDROID_RIPPLE}
     >
-      <Image
-        source={bundle.heroImageUrl}
-        style={styles.image}
-        contentFit="cover"
-        cachePolicy="memory-disk"
-        recyclingKey={bundle.id}
-      />
+      <View style={styles.imageWrap}>
+        <LinearGradient
+          colors={GRADIENT_COLORS}
+          start={GRADIENT_START}
+          end={GRADIENT_END}
+          style={StyleSheet.absoluteFill}
+        />
+        <Ionicons
+          name="compass-outline"
+          size={36}
+          color="#64748B"
+          accessibilityElementsHidden
+          importantForAccessibility="no-hide-descendants"
+        />
+        <Image
+          source={bundle.heroImageUrl}
+          style={StyleSheet.absoluteFill}
+          contentFit="cover"
+          cachePolicy="memory-disk"
+          recyclingKey={bundle.id}
+          transition={300}
+        />
+      </View>
       <View style={styles.body}>
         <View style={styles.row}>
           <Text style={styles.destination} numberOfLines={1}>
@@ -62,6 +80,11 @@ const CARD_RADIUS = 14;
 
 const ANDROID_RIPPLE = { color: 'rgba(0,0,0,0.08)' } as const;
 
+// Frozen tuples so LinearGradient props don't allocate per render.
+const GRADIENT_COLORS = ['#DBEAFE', '#FFFFFF'] as const;
+const GRADIENT_START = { x: 0, y: 0 } as const;
+const GRADIENT_END = { x: 1, y: 1 } as const;
+
 const styles = StyleSheet.create({
   card: {
     backgroundColor: '#FFFFFF',
@@ -75,10 +98,12 @@ const styles = StyleSheet.create({
     shadowRadius: 8,
     elevation: 2,
   },
-  image: {
+  imageWrap: {
     width: '100%',
     height: IMAGE_HEIGHT,
-    backgroundColor: '#E5E7EB',
+    alignItems: 'center',
+    justifyContent: 'center',
+    overflow: 'hidden',
   },
   body: { padding: 14, gap: 8 },
   row: {

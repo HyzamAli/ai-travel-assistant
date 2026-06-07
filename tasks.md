@@ -83,10 +83,10 @@ Legend: `[ ]` open · `[x]` done · `(FRx.y)` ties to a requirement.
 - Repeat scrolls hit cache, not network.
 
 **Tasks**
-- [ ] Replace RN `Image` with `expo-image`.
-- [ ] Add `placeholder` (blurhash) and `transition` props.
-- [ ] Set `cachePolicy="memory-disk"`.
-- [ ] Verify caching: scroll down, back up, watch network panel.
+- [x] Replace RN `Image` with `expo-image`. (Done in 1.2 to avoid rework.)
+- [x] Add placeholder + `transition` props. Used a layered `LinearGradient` (`#DBEAFE` → `#FFFFFF` diagonal) with a centered `compass-outline` Ionicon instead of a blurhash — spec allows "color block," and a designed gradient + icon reads as a deliberate loading state rather than a flat grey.
+- [x] Set `cachePolicy="memory-disk"`. (Done in 1.2.)
+- [ ] Verify caching: scroll down, back up, watch network panel. (Manual; document in PERFORMANCE.md alongside Story 5.2.)
 
 ### Story 1.4 — Expandable Details with nested horizontal scroll
 **As a user, I want to tap a card to see day-by-day highlights so I can preview the trip.** (FR1.4)
