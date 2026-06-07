@@ -66,12 +66,12 @@ Legend: `[ ]` open · `[x]` done · `(FRx.y)` ties to a requirement.
 - Idle scroll ≥58 FPS; 100-item virtualisation does not drop below 55 FPS. (NFR1)
 
 **Tasks**
-- [ ] Build `BundleCard` presentational component.
-- [ ] Build `FeedScreen` at `app/index.tsx` consuming the mock service.
-- [ ] Set FlashList `estimatedItemSize` accurately; verify recycle behavior.
-- [ ] Memoize card; avoid inline styles/handlers in `renderItem`.
-- [ ] Loading state (skeletons or spinner) while service resolves.
-- [ ] Error/empty state.
+- [x] Build `BundleCard` presentational component.
+- [x] Build `FeedScreen` at `app/index.tsx` consuming the mock service.
+- [x] Verify FlashList recycle behavior (`recyclingKey` on image, stable `keyExtractor`). FlashList v2 no longer needs `estimatedItemSize` — precise measurement replaces it.
+- [x] React Compiler is on, so no manual `React.memo`. Card avoids inline styles/handlers by hoisting `renderItem`/`keyExtractor`/`StyleSheet.create` to module scope and pre-building per-`tripType` badge styles.
+- [x] Loading state (spinner) while service resolves.
+- [x] Error/retry state.
 
 ### Story 1.3 — Remote image loading with placeholder & cache
 **As a user, I want images to appear quickly with a soft placeholder so the feed feels instant.** (FR1.5, FR1.6)
