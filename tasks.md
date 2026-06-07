@@ -34,9 +34,9 @@ Legend: `[ ]` open · `[x]` done · `(FRx.y)` ties to a requirement.
 - Rationale written in README covering: bundle size, re-render granularity, dev ergonomics, fit for chat + feed state.
 
 **Tasks**
-- [ ] Compare top 2 options for this app's state shape (feed cache, chat history, overlay metrics).
-- [ ] Implement minimal store boilerplate.
-- [ ] Draft rationale paragraph for README.
+- [x] Compare top 2 options for this app's state shape (feed cache, chat history, overlay metrics).
+- [x] Implement minimal store boilerplate.
+- [x] Draft rationale paragraph for README.
 
 ---
 
