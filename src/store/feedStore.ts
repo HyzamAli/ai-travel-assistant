@@ -1,7 +1,5 @@
 import { create } from 'zustand';
-
-// Minimal placeholder — Story 1.1 will define the full Bundle shape.
-export type Bundle = { id: string };
+import type { Bundle } from '@/types/bundle';
 
 type FeedState = {
   bundles: Bundle[];

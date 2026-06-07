@@ -51,11 +51,11 @@ Legend: `[ ]` open · `[x]` done · `(FRx.y)` ties to a requirement.
 - Fetcher exposes `getBundles(): Promise<Bundle[]>` with 600–1200 ms artificial delay.
 
 **Tasks**
-- [ ] Define `Bundle` and `DayHighlight` TypeScript types.
-- [ ] Generate `mocks/bundles.json` (script or hand-curate).
-- [ ] Source 100+ remote hero image URLs (Unsplash/Pexels/Picsum).
-- [ ] Implement `services/bundles.ts` with delayed promise.
-- [ ] Add unit-level sanity check that all entries validate against the type.
+- [x] Define `Bundle` and `DayHighlight` TypeScript types.
+- [x] Generate `mocks/bundles.json` (script or hand-curate).
+- [x] Source 100+ remote hero image URLs (Unsplash/Pexels/Picsum).
+- [x] Implement `services/bundles.ts` with delayed promise.
+- [x] Add unit-level sanity check that all entries validate against the type.
 
 ### Story 1.2 — Render the scrollable feed
 **As a user, I want to scroll through travel bundles smoothly so I can browse trips.** (FR1.1, FR1.3, NFR1)

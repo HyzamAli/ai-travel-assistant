@@ -1,0 +1,3271 @@
+[
+  {
+    "id": "bundle-001",
+    "destination": "Bali, Indonesia",
+    "tripType": "flightStay",
+    "price": {
+      "amount": 77500,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 8,
+      "nights": 7
+    },
+    "rating": 4.7,
+    "heroImageUrl": "https://images.unsplash.com/photo-1507608616759-54f48f0af0ee?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Boutique stay",
+        "iconName": "bed"
+      },
+      {
+        "title": "Botanical gardens",
+        "iconName": "leaf"
+      },
+      {
+        "title": "Stargazing night",
+        "iconName": "star"
+      }
+    ]
+  },
+  {
+    "id": "bundle-002",
+    "destination": "Hoi An, Vietnam",
+    "tripType": "villa",
+    "price": {
+      "amount": 103500,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 4,
+      "nights": 3
+    },
+    "rating": 4.9,
+    "heroImageUrl": "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Private beach day",
+        "iconName": "partly-sunny"
+      },
+      {
+        "title": "Café hopping",
+        "iconName": "cafe"
+      },
+      {
+        "title": "Stargazing night",
+        "iconName": "star"
+      },
+      {
+        "title": "Sunset viewpoint",
+        "iconName": "camera"
+      }
+    ]
+  },
+  {
+    "id": "bundle-003",
+    "destination": "Banff, Canada",
+    "tripType": "experience",
+    "price": {
+      "amount": 33500,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 5,
+      "nights": 4
+    },
+    "rating": 4.3,
+    "heroImageUrl": "https://images.unsplash.com/photo-1493780474015-ba834fd0ce2f?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Arrival flight",
+        "iconName": "airplane"
+      },
+      {
+        "title": "Snorkel session",
+        "iconName": "fish"
+      },
+      {
+        "title": "Private beach day",
+        "iconName": "partly-sunny"
+      },
+      {
+        "title": "Sunset cruise",
+        "iconName": "boat"
+      }
+    ]
+  },
+  {
+    "id": "bundle-004",
+    "destination": "Pondicherry, India",
+    "tripType": "flightStay",
+    "price": {
+      "amount": 90000,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 6,
+      "nights": 5
+    },
+    "rating": 4.1,
+    "heroImageUrl": "https://images.unsplash.com/photo-1519810755548-39cd217da494?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Vineyard tasting",
+        "iconName": "wine"
+      },
+      {
+        "title": "Guided exploration",
+        "iconName": "compass"
+      },
+      {
+        "title": "Arrival flight",
+        "iconName": "airplane"
+      },
+      {
+        "title": "Beach bonfire",
+        "iconName": "flame"
+      }
+    ]
+  },
+  {
+    "id": "bundle-005",
+    "destination": "Andaman Islands, India",
+    "tripType": "villa",
+    "price": {
+      "amount": 144500,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 6,
+      "nights": 5
+    },
+    "rating": 4.5,
+    "heroImageUrl": "https://images.unsplash.com/photo-1473625247510-8ceb1760943f?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Waterfall trek",
+        "iconName": "water"
+      },
+      {
+        "title": "Welcome hamper",
+        "iconName": "gift"
+      },
+      {
+        "title": "Beach bonfire",
+        "iconName": "flame"
+      }
+    ]
+  },
+  {
+    "id": "bundle-006",
+    "destination": "Mauritius",
+    "tripType": "experience",
+    "price": {
+      "amount": 18500,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 4,
+      "nights": 3
+    },
+    "rating": 4.1,
+    "heroImageUrl": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Private beach day",
+        "iconName": "partly-sunny"
+      },
+      {
+        "title": "Old town walking tour",
+        "iconName": "walk"
+      },
+      {
+        "title": "Boutique stay",
+        "iconName": "bed"
+      },
+      {
+        "title": "Café hopping",
+        "iconName": "cafe"
+      }
+    ]
+  },
+  {
+    "id": "bundle-007",
+    "destination": "Bali, Indonesia",
+    "tripType": "flightStay",
+    "price": {
+      "amount": 81500,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 6,
+      "nights": 5
+    },
+    "rating": 4.6,
+    "heroImageUrl": "https://images.unsplash.com/photo-1507608616759-54f48f0af0ee?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Sunset cruise",
+        "iconName": "boat"
+      },
+      {
+        "title": "Boutique stay",
+        "iconName": "bed"
+      },
+      {
+        "title": "Vineyard tasting",
+        "iconName": "wine"
+      }
+    ]
+  },
+  {
+    "id": "bundle-008",
+    "destination": "Goa, India",
+    "tripType": "villa",
+    "price": {
+      "amount": 157500,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 8,
+      "nights": 7
+    },
+    "rating": 4.9,
+    "heroImageUrl": "https://images.unsplash.com/photo-1499678329028-101435549a4e?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Private beach day",
+        "iconName": "partly-sunny"
+      },
+      {
+        "title": "Botanical gardens",
+        "iconName": "leaf"
+      },
+      {
+        "title": "Local food tour",
+        "iconName": "restaurant"
+      }
+    ]
+  },
+  {
+    "id": "bundle-009",
+    "destination": "Prague, Czechia",
+    "tripType": "experience",
+    "price": {
+      "amount": 21000,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 4,
+      "nights": 3
+    },
+    "rating": 5,
+    "heroImageUrl": "https://images.unsplash.com/photo-1493606278519-11aa9f86e40a?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Stargazing night",
+        "iconName": "star"
+      },
+      {
+        "title": "Spa & wellness",
+        "iconName": "sparkles"
+      },
+      {
+        "title": "Heritage homestay",
+        "iconName": "home"
+      },
+      {
+        "title": "Sunset viewpoint",
+        "iconName": "camera"
+      }
+    ]
+  },
+  {
+    "id": "bundle-010",
+    "destination": "Hoi An, Vietnam",
+    "tripType": "flightStay",
+    "price": {
+      "amount": 78500,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 9,
+      "nights": 8
+    },
+    "rating": 4.2,
+    "heroImageUrl": "https://images.unsplash.com/photo-1473496169904-658ba7c44d8a?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Arrival flight",
+        "iconName": "airplane"
+      },
+      {
+        "title": "Live music night",
+        "iconName": "musical-notes"
+      },
+      {
+        "title": "Boutique stay",
+        "iconName": "bed"
+      }
+    ]
+  },
+  {
+    "id": "bundle-011",
+    "destination": "Lisbon, Portugal",
+    "tripType": "villa",
+    "price": {
+      "amount": 95000,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 8,
+      "nights": 7
+    },
+    "rating": 4.1,
+    "heroImageUrl": "https://images.unsplash.com/photo-1517760444937-f6397edcbbcd?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Sunset cruise",
+        "iconName": "boat"
+      },
+      {
+        "title": "Stargazing night",
+        "iconName": "star"
+      },
+      {
+        "title": "Botanical gardens",
+        "iconName": "leaf"
+      },
+      {
+        "title": "Live music night",
+        "iconName": "musical-notes"
+      }
+    ]
+  },
+  {
+    "id": "bundle-012",
+    "destination": "Bali, Indonesia",
+    "tripType": "experience",
+    "price": {
+      "amount": 8500,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 3,
+      "nights": 2
+    },
+    "rating": 4.4,
+    "heroImageUrl": "https://images.unsplash.com/photo-1542640244-7e672d6cef4e?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Snorkel session",
+        "iconName": "fish"
+      },
+      {
+        "title": "Cycling trail",
+        "iconName": "bicycle"
+      },
+      {
+        "title": "Welcome hamper",
+        "iconName": "gift"
+      }
+    ]
+  },
+  {
+    "id": "bundle-013",
+    "destination": "Andaman Islands, India",
+    "tripType": "flightStay",
+    "price": {
+      "amount": 64500,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 6,
+      "nights": 5
+    },
+    "rating": 5,
+    "heroImageUrl": "https://images.unsplash.com/photo-1504457047772-27faf1c00561?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Guided exploration",
+        "iconName": "compass"
+      },
+      {
+        "title": "Welcome hamper",
+        "iconName": "gift"
+      },
+      {
+        "title": "Old town walking tour",
+        "iconName": "walk"
+      }
+    ]
+  },
+  {
+    "id": "bundle-014",
+    "destination": "Hoi An, Vietnam",
+    "tripType": "villa",
+    "price": {
+      "amount": 119000,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 7,
+      "nights": 6
+    },
+    "rating": 3.8,
+    "heroImageUrl": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Private beach day",
+        "iconName": "partly-sunny"
+      },
+      {
+        "title": "Spa & wellness",
+        "iconName": "sparkles"
+      },
+      {
+        "title": "Local food tour",
+        "iconName": "restaurant"
+      },
+      {
+        "title": "Café hopping",
+        "iconName": "cafe"
+      }
+    ]
+  },
+  {
+    "id": "bundle-015",
+    "destination": "Andaman Islands, India",
+    "tripType": "experience",
+    "price": {
+      "amount": 11000,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 3,
+      "nights": 2
+    },
+    "rating": 4.3,
+    "heroImageUrl": "https://images.unsplash.com/photo-1530841377377-3ff06c0ca713?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Botanical gardens",
+        "iconName": "leaf"
+      },
+      {
+        "title": "Stargazing night",
+        "iconName": "star"
+      },
+      {
+        "title": "Café hopping",
+        "iconName": "cafe"
+      },
+      {
+        "title": "Snorkel session",
+        "iconName": "fish"
+      }
+    ]
+  },
+  {
+    "id": "bundle-016",
+    "destination": "Marrakech, Morocco",
+    "tripType": "flightStay",
+    "price": {
+      "amount": 112000,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 8,
+      "nights": 7
+    },
+    "rating": 4.2,
+    "heroImageUrl": "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Boutique stay",
+        "iconName": "bed"
+      },
+      {
+        "title": "Sunset cruise",
+        "iconName": "boat"
+      },
+      {
+        "title": "Waterfall trek",
+        "iconName": "water"
+      }
+    ]
+  },
+  {
+    "id": "bundle-017",
+    "destination": "Banff, Canada",
+    "tripType": "villa",
+    "price": {
+      "amount": 249500,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 5,
+      "nights": 4
+    },
+    "rating": 4.8,
+    "heroImageUrl": "https://images.unsplash.com/photo-1493558103817-58b2924bce98?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Cycling trail",
+        "iconName": "bicycle"
+      },
+      {
+        "title": "Boutique stay",
+        "iconName": "bed"
+      },
+      {
+        "title": "Café hopping",
+        "iconName": "cafe"
+      },
+      {
+        "title": "Heritage homestay",
+        "iconName": "home"
+      }
+    ]
+  },
+  {
+    "id": "bundle-018",
+    "destination": "Sri Lanka",
+    "tripType": "experience",
+    "price": {
+      "amount": 9000,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 3,
+      "nights": 2
+    },
+    "rating": 3.9,
+    "heroImageUrl": "https://images.unsplash.com/photo-1505228395891-9a51e7e86bf6?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Local food tour",
+        "iconName": "restaurant"
+      },
+      {
+        "title": "Welcome hamper",
+        "iconName": "gift"
+      },
+      {
+        "title": "Private beach day",
+        "iconName": "partly-sunny"
+      },
+      {
+        "title": "Cycling trail",
+        "iconName": "bicycle"
+      }
+    ]
+  },
+  {
+    "id": "bundle-019",
+    "destination": "Hoi An, Vietnam",
+    "tripType": "flightStay",
+    "price": {
+      "amount": 61000,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 8,
+      "nights": 7
+    },
+    "rating": 4.9,
+    "heroImageUrl": "https://images.unsplash.com/photo-1542640244-7e672d6cef4e?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Stargazing night",
+        "iconName": "star"
+      },
+      {
+        "title": "Private beach day",
+        "iconName": "partly-sunny"
+      },
+      {
+        "title": "Cycling trail",
+        "iconName": "bicycle"
+      },
+      {
+        "title": "Snorkel session",
+        "iconName": "fish"
+      }
+    ]
+  },
+  {
+    "id": "bundle-020",
+    "destination": "Kyoto, Japan",
+    "tripType": "villa",
+    "price": {
+      "amount": 157500,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 6,
+      "nights": 5
+    },
+    "rating": 4.6,
+    "heroImageUrl": "https://images.unsplash.com/photo-1517760444937-f6397edcbbcd?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Botanical gardens",
+        "iconName": "leaf"
+      },
+      {
+        "title": "Boutique stay",
+        "iconName": "bed"
+      },
+      {
+        "title": "Stargazing night",
+        "iconName": "star"
+      }
+    ]
+  },
+  {
+    "id": "bundle-021",
+    "destination": "Rishikesh, India",
+    "tripType": "experience",
+    "price": {
+      "amount": 10500,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 4,
+      "nights": 3
+    },
+    "rating": 4.7,
+    "heroImageUrl": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Old town walking tour",
+        "iconName": "walk"
+      },
+      {
+        "title": "Café hopping",
+        "iconName": "cafe"
+      },
+      {
+        "title": "Live music night",
+        "iconName": "musical-notes"
+      },
+      {
+        "title": "Botanical gardens",
+        "iconName": "leaf"
+      }
+    ]
+  },
+  {
+    "id": "bundle-022",
+    "destination": "Queenstown, New Zealand",
+    "tripType": "flightStay",
+    "price": {
+      "amount": 102000,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 5,
+      "nights": 4
+    },
+    "rating": 4.6,
+    "heroImageUrl": "https://images.unsplash.com/photo-1493558103817-58b2924bce98?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Live music night",
+        "iconName": "musical-notes"
+      },
+      {
+        "title": "Sunset cruise",
+        "iconName": "boat"
+      },
+      {
+        "title": "Sunset viewpoint",
+        "iconName": "camera"
+      }
+    ]
+  },
+  {
+    "id": "bundle-023",
+    "destination": "Cusco, Peru",
+    "tripType": "villa",
+    "price": {
+      "amount": 161000,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 8,
+      "nights": 7
+    },
+    "rating": 4.2,
+    "heroImageUrl": "https://images.unsplash.com/photo-1542640244-7e672d6cef4e?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Waterfall trek",
+        "iconName": "water"
+      },
+      {
+        "title": "Cycling trail",
+        "iconName": "bicycle"
+      },
+      {
+        "title": "Café hopping",
+        "iconName": "cafe"
+      }
+    ]
+  },
+  {
+    "id": "bundle-024",
+    "destination": "Kyoto, Japan",
+    "tripType": "experience",
+    "price": {
+      "amount": 17000,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 3,
+      "nights": 2
+    },
+    "rating": 4.7,
+    "heroImageUrl": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Waterfall trek",
+        "iconName": "water"
+      },
+      {
+        "title": "Stargazing night",
+        "iconName": "star"
+      },
+      {
+        "title": "Live music night",
+        "iconName": "musical-notes"
+      }
+    ]
+  },
+  {
+    "id": "bundle-025",
+    "destination": "Seychelles",
+    "tripType": "flightStay",
+    "price": {
+      "amount": 77000,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 5,
+      "nights": 4
+    },
+    "rating": 3.8,
+    "heroImageUrl": "https://images.unsplash.com/photo-1542640244-7e672d6cef4e?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Spa & wellness",
+        "iconName": "sparkles"
+      },
+      {
+        "title": "Sunset viewpoint",
+        "iconName": "camera"
+      },
+      {
+        "title": "Guided exploration",
+        "iconName": "compass"
+      },
+      {
+        "title": "Beach bonfire",
+        "iconName": "flame"
+      }
+    ]
+  },
+  {
+    "id": "bundle-026",
+    "destination": "Rishikesh, India",
+    "tripType": "villa",
+    "price": {
+      "amount": 166000,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 8,
+      "nights": 7
+    },
+    "rating": 4.2,
+    "heroImageUrl": "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Heritage homestay",
+        "iconName": "home"
+      },
+      {
+        "title": "Boutique stay",
+        "iconName": "bed"
+      },
+      {
+        "title": "Snorkel session",
+        "iconName": "fish"
+      }
+    ]
+  },
+  {
+    "id": "bundle-027",
+    "destination": "Bangkok, Thailand",
+    "tripType": "experience",
+    "price": {
+      "amount": 15000,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 5,
+      "nights": 4
+    },
+    "rating": 3.8,
+    "heroImageUrl": "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Botanical gardens",
+        "iconName": "leaf"
+      },
+      {
+        "title": "Local food tour",
+        "iconName": "restaurant"
+      },
+      {
+        "title": "Boutique stay",
+        "iconName": "bed"
+      },
+      {
+        "title": "Arrival flight",
+        "iconName": "airplane"
+      }
+    ]
+  },
+  {
+    "id": "bundle-028",
+    "destination": "Mauritius",
+    "tripType": "flightStay",
+    "price": {
+      "amount": 89500,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 5,
+      "nights": 4
+    },
+    "rating": 4.3,
+    "heroImageUrl": "https://images.unsplash.com/photo-1473496169904-658ba7c44d8a?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Café hopping",
+        "iconName": "cafe"
+      },
+      {
+        "title": "Stargazing night",
+        "iconName": "star"
+      },
+      {
+        "title": "Snorkel session",
+        "iconName": "fish"
+      },
+      {
+        "title": "Cycling trail",
+        "iconName": "bicycle"
+      }
+    ]
+  },
+  {
+    "id": "bundle-029",
+    "destination": "Coorg, India",
+    "tripType": "villa",
+    "price": {
+      "amount": 195000,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 8,
+      "nights": 7
+    },
+    "rating": 4.8,
+    "heroImageUrl": "https://images.unsplash.com/photo-1505228395891-9a51e7e86bf6?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Beach bonfire",
+        "iconName": "flame"
+      },
+      {
+        "title": "Live music night",
+        "iconName": "musical-notes"
+      },
+      {
+        "title": "Botanical gardens",
+        "iconName": "leaf"
+      },
+      {
+        "title": "Waterfall trek",
+        "iconName": "water"
+      }
+    ]
+  },
+  {
+    "id": "bundle-030",
+    "destination": "Santorini, Greece",
+    "tripType": "experience",
+    "price": {
+      "amount": 19000,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 3,
+      "nights": 2
+    },
+    "rating": 4.1,
+    "heroImageUrl": "https://images.unsplash.com/photo-1504609813442-a8924e83f76e?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Vineyard tasting",
+        "iconName": "wine"
+      },
+      {
+        "title": "Old town walking tour",
+        "iconName": "walk"
+      },
+      {
+        "title": "Guided exploration",
+        "iconName": "compass"
+      },
+      {
+        "title": "Arrival flight",
+        "iconName": "airplane"
+      }
+    ]
+  },
+  {
+    "id": "bundle-031",
+    "destination": "Udaipur, India",
+    "tripType": "flightStay",
+    "price": {
+      "amount": 68000,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 9,
+      "nights": 8
+    },
+    "rating": 4.1,
+    "heroImageUrl": "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Welcome hamper",
+        "iconName": "gift"
+      },
+      {
+        "title": "Botanical gardens",
+        "iconName": "leaf"
+      },
+      {
+        "title": "Heritage homestay",
+        "iconName": "home"
+      },
+      {
+        "title": "Sunset cruise",
+        "iconName": "boat"
+      }
+    ]
+  },
+  {
+    "id": "bundle-032",
+    "destination": "Reykjavik, Iceland",
+    "tripType": "villa",
+    "price": {
+      "amount": 175000,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 5,
+      "nights": 4
+    },
+    "rating": 3.8,
+    "heroImageUrl": "https://images.unsplash.com/photo-1473496169904-658ba7c44d8a?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Boutique stay",
+        "iconName": "bed"
+      },
+      {
+        "title": "Vineyard tasting",
+        "iconName": "wine"
+      },
+      {
+        "title": "Botanical gardens",
+        "iconName": "leaf"
+      }
+    ]
+  },
+  {
+    "id": "bundle-033",
+    "destination": "Kyoto, Japan",
+    "tripType": "experience",
+    "price": {
+      "amount": 26000,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 5,
+      "nights": 4
+    },
+    "rating": 4.3,
+    "heroImageUrl": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Waterfall trek",
+        "iconName": "water"
+      },
+      {
+        "title": "Beach bonfire",
+        "iconName": "flame"
+      },
+      {
+        "title": "Old town walking tour",
+        "iconName": "walk"
+      }
+    ]
+  },
+  {
+    "id": "bundle-034",
+    "destination": "Seychelles",
+    "tripType": "flightStay",
+    "price": {
+      "amount": 78000,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 7,
+      "nights": 6
+    },
+    "rating": 4.9,
+    "heroImageUrl": "https://images.unsplash.com/photo-1507608616759-54f48f0af0ee?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Live music night",
+        "iconName": "musical-notes"
+      },
+      {
+        "title": "Waterfall trek",
+        "iconName": "water"
+      },
+      {
+        "title": "Local food tour",
+        "iconName": "restaurant"
+      }
+    ]
+  },
+  {
+    "id": "bundle-035",
+    "destination": "Hoi An, Vietnam",
+    "tripType": "villa",
+    "price": {
+      "amount": 95500,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 5,
+      "nights": 4
+    },
+    "rating": 4,
+    "heroImageUrl": "https://images.unsplash.com/photo-1473625247510-8ceb1760943f?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Arrival flight",
+        "iconName": "airplane"
+      },
+      {
+        "title": "Old town walking tour",
+        "iconName": "walk"
+      },
+      {
+        "title": "Vineyard tasting",
+        "iconName": "wine"
+      }
+    ]
+  },
+  {
+    "id": "bundle-036",
+    "destination": "Sri Lanka",
+    "tripType": "experience",
+    "price": {
+      "amount": 30500,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 5,
+      "nights": 4
+    },
+    "rating": 4.7,
+    "heroImageUrl": "https://images.unsplash.com/photo-1542640244-7e672d6cef4e?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Snorkel session",
+        "iconName": "fish"
+      },
+      {
+        "title": "Boutique stay",
+        "iconName": "bed"
+      },
+      {
+        "title": "Café hopping",
+        "iconName": "cafe"
+      },
+      {
+        "title": "Private beach day",
+        "iconName": "partly-sunny"
+      }
+    ]
+  },
+  {
+    "id": "bundle-037",
+    "destination": "Kyoto, Japan",
+    "tripType": "flightStay",
+    "price": {
+      "amount": 57500,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 8,
+      "nights": 7
+    },
+    "rating": 4.8,
+    "heroImageUrl": "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Welcome hamper",
+        "iconName": "gift"
+      },
+      {
+        "title": "Sunset cruise",
+        "iconName": "boat"
+      },
+      {
+        "title": "Private beach day",
+        "iconName": "partly-sunny"
+      },
+      {
+        "title": "Cycling trail",
+        "iconName": "bicycle"
+      }
+    ]
+  },
+  {
+    "id": "bundle-038",
+    "destination": "Prague, Czechia",
+    "tripType": "villa",
+    "price": {
+      "amount": 132500,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 7,
+      "nights": 6
+    },
+    "rating": 4.1,
+    "heroImageUrl": "https://images.unsplash.com/photo-1502920917128-1aa500764cbd?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Spa & wellness",
+        "iconName": "sparkles"
+      },
+      {
+        "title": "Beach bonfire",
+        "iconName": "flame"
+      },
+      {
+        "title": "Old town walking tour",
+        "iconName": "walk"
+      },
+      {
+        "title": "Waterfall trek",
+        "iconName": "water"
+      }
+    ]
+  },
+  {
+    "id": "bundle-039",
+    "destination": "Reykjavik, Iceland",
+    "tripType": "experience",
+    "price": {
+      "amount": 11000,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 4,
+      "nights": 3
+    },
+    "rating": 4.7,
+    "heroImageUrl": "https://images.unsplash.com/photo-1505228395891-9a51e7e86bf6?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Guided exploration",
+        "iconName": "compass"
+      },
+      {
+        "title": "Spa & wellness",
+        "iconName": "sparkles"
+      },
+      {
+        "title": "Sunset viewpoint",
+        "iconName": "camera"
+      }
+    ]
+  },
+  {
+    "id": "bundle-040",
+    "destination": "Cusco, Peru",
+    "tripType": "flightStay",
+    "price": {
+      "amount": 99000,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 9,
+      "nights": 8
+    },
+    "rating": 4.8,
+    "heroImageUrl": "https://images.unsplash.com/photo-1504609813442-a8924e83f76e?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Welcome hamper",
+        "iconName": "gift"
+      },
+      {
+        "title": "Café hopping",
+        "iconName": "cafe"
+      },
+      {
+        "title": "Cycling trail",
+        "iconName": "bicycle"
+      },
+      {
+        "title": "Spa & wellness",
+        "iconName": "sparkles"
+      }
+    ]
+  },
+  {
+    "id": "bundle-041",
+    "destination": "Udaipur, India",
+    "tripType": "villa",
+    "price": {
+      "amount": 76000,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 5,
+      "nights": 4
+    },
+    "rating": 3.9,
+    "heroImageUrl": "https://images.unsplash.com/photo-1530841377377-3ff06c0ca713?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Stargazing night",
+        "iconName": "star"
+      },
+      {
+        "title": "Welcome hamper",
+        "iconName": "gift"
+      },
+      {
+        "title": "Botanical gardens",
+        "iconName": "leaf"
+      }
+    ]
+  },
+  {
+    "id": "bundle-042",
+    "destination": "Andaman Islands, India",
+    "tripType": "experience",
+    "price": {
+      "amount": 20500,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 4,
+      "nights": 3
+    },
+    "rating": 4.4,
+    "heroImageUrl": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Guided exploration",
+        "iconName": "compass"
+      },
+      {
+        "title": "Welcome hamper",
+        "iconName": "gift"
+      },
+      {
+        "title": "Live music night",
+        "iconName": "musical-notes"
+      },
+      {
+        "title": "Café hopping",
+        "iconName": "cafe"
+      }
+    ]
+  },
+  {
+    "id": "bundle-043",
+    "destination": "Santorini, Greece",
+    "tripType": "flightStay",
+    "price": {
+      "amount": 115000,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 6,
+      "nights": 5
+    },
+    "rating": 4.2,
+    "heroImageUrl": "https://images.unsplash.com/photo-1517760444937-f6397edcbbcd?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Private beach day",
+        "iconName": "partly-sunny"
+      },
+      {
+        "title": "Cycling trail",
+        "iconName": "bicycle"
+      },
+      {
+        "title": "Welcome hamper",
+        "iconName": "gift"
+      },
+      {
+        "title": "Live music night",
+        "iconName": "musical-notes"
+      }
+    ]
+  },
+  {
+    "id": "bundle-044",
+    "destination": "Bali, Indonesia",
+    "tripType": "villa",
+    "price": {
+      "amount": 192500,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 5,
+      "nights": 4
+    },
+    "rating": 4,
+    "heroImageUrl": "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Sunset viewpoint",
+        "iconName": "camera"
+      },
+      {
+        "title": "Arrival flight",
+        "iconName": "airplane"
+      },
+      {
+        "title": "Vineyard tasting",
+        "iconName": "wine"
+      },
+      {
+        "title": "Local food tour",
+        "iconName": "restaurant"
+      }
+    ]
+  },
+  {
+    "id": "bundle-045",
+    "destination": "Marrakech, Morocco",
+    "tripType": "experience",
+    "price": {
+      "amount": 31500,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 4,
+      "nights": 3
+    },
+    "rating": 3.9,
+    "heroImageUrl": "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Old town walking tour",
+        "iconName": "walk"
+      },
+      {
+        "title": "Snorkel session",
+        "iconName": "fish"
+      },
+      {
+        "title": "Café hopping",
+        "iconName": "cafe"
+      },
+      {
+        "title": "Stargazing night",
+        "iconName": "star"
+      }
+    ]
+  },
+  {
+    "id": "bundle-046",
+    "destination": "Cusco, Peru",
+    "tripType": "flightStay",
+    "price": {
+      "amount": 74500,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 7,
+      "nights": 6
+    },
+    "rating": 4.6,
+    "heroImageUrl": "https://images.unsplash.com/photo-1502920917128-1aa500764cbd?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Arrival flight",
+        "iconName": "airplane"
+      },
+      {
+        "title": "Heritage homestay",
+        "iconName": "home"
+      },
+      {
+        "title": "Botanical gardens",
+        "iconName": "leaf"
+      }
+    ]
+  },
+  {
+    "id": "bundle-047",
+    "destination": "Udaipur, India",
+    "tripType": "villa",
+    "price": {
+      "amount": 241500,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 7,
+      "nights": 6
+    },
+    "rating": 4.2,
+    "heroImageUrl": "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Beach bonfire",
+        "iconName": "flame"
+      },
+      {
+        "title": "Guided exploration",
+        "iconName": "compass"
+      },
+      {
+        "title": "Botanical gardens",
+        "iconName": "leaf"
+      },
+      {
+        "title": "Sunset viewpoint",
+        "iconName": "camera"
+      }
+    ]
+  },
+  {
+    "id": "bundle-048",
+    "destination": "Phuket, Thailand",
+    "tripType": "experience",
+    "price": {
+      "amount": 30000,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 3,
+      "nights": 2
+    },
+    "rating": 4.3,
+    "heroImageUrl": "https://images.unsplash.com/photo-1517760444937-f6397edcbbcd?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Local food tour",
+        "iconName": "restaurant"
+      },
+      {
+        "title": "Beach bonfire",
+        "iconName": "flame"
+      },
+      {
+        "title": "Waterfall trek",
+        "iconName": "water"
+      }
+    ]
+  },
+  {
+    "id": "bundle-049",
+    "destination": "Lisbon, Portugal",
+    "tripType": "flightStay",
+    "price": {
+      "amount": 46500,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 9,
+      "nights": 8
+    },
+    "rating": 4.9,
+    "heroImageUrl": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Vineyard tasting",
+        "iconName": "wine"
+      },
+      {
+        "title": "Sunset cruise",
+        "iconName": "boat"
+      },
+      {
+        "title": "Waterfall trek",
+        "iconName": "water"
+      },
+      {
+        "title": "Spa & wellness",
+        "iconName": "sparkles"
+      }
+    ]
+  },
+  {
+    "id": "bundle-050",
+    "destination": "Andaman Islands, India",
+    "tripType": "villa",
+    "price": {
+      "amount": 84500,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 7,
+      "nights": 6
+    },
+    "rating": 5,
+    "heroImageUrl": "https://images.unsplash.com/photo-1504457047772-27faf1c00561?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Snorkel session",
+        "iconName": "fish"
+      },
+      {
+        "title": "Spa & wellness",
+        "iconName": "sparkles"
+      },
+      {
+        "title": "Waterfall trek",
+        "iconName": "water"
+      },
+      {
+        "title": "Guided exploration",
+        "iconName": "compass"
+      }
+    ]
+  },
+  {
+    "id": "bundle-051",
+    "destination": "Dubai, UAE",
+    "tripType": "experience",
+    "price": {
+      "amount": 21500,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 4,
+      "nights": 3
+    },
+    "rating": 3.8,
+    "heroImageUrl": "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Botanical gardens",
+        "iconName": "leaf"
+      },
+      {
+        "title": "Vineyard tasting",
+        "iconName": "wine"
+      },
+      {
+        "title": "Old town walking tour",
+        "iconName": "walk"
+      }
+    ]
+  },
+  {
+    "id": "bundle-052",
+    "destination": "Kyoto, Japan",
+    "tripType": "flightStay",
+    "price": {
+      "amount": 115500,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 8,
+      "nights": 7
+    },
+    "rating": 4.1,
+    "heroImageUrl": "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Sunset viewpoint",
+        "iconName": "camera"
+      },
+      {
+        "title": "Botanical gardens",
+        "iconName": "leaf"
+      },
+      {
+        "title": "Beach bonfire",
+        "iconName": "flame"
+      },
+      {
+        "title": "Heritage homestay",
+        "iconName": "home"
+      }
+    ]
+  },
+  {
+    "id": "bundle-053",
+    "destination": "Kyoto, Japan",
+    "tripType": "villa",
+    "price": {
+      "amount": 173500,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 7,
+      "nights": 6
+    },
+    "rating": 4.9,
+    "heroImageUrl": "https://images.unsplash.com/photo-1517760444937-f6397edcbbcd?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Welcome hamper",
+        "iconName": "gift"
+      },
+      {
+        "title": "Café hopping",
+        "iconName": "cafe"
+      },
+      {
+        "title": "Cycling trail",
+        "iconName": "bicycle"
+      }
+    ]
+  },
+  {
+    "id": "bundle-054",
+    "destination": "Goa, India",
+    "tripType": "experience",
+    "price": {
+      "amount": 22500,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 3,
+      "nights": 2
+    },
+    "rating": 4.4,
+    "heroImageUrl": "https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Arrival flight",
+        "iconName": "airplane"
+      },
+      {
+        "title": "Private beach day",
+        "iconName": "partly-sunny"
+      },
+      {
+        "title": "Sunset cruise",
+        "iconName": "boat"
+      }
+    ]
+  },
+  {
+    "id": "bundle-055",
+    "destination": "Rishikesh, India",
+    "tripType": "flightStay",
+    "price": {
+      "amount": 52000,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 9,
+      "nights": 8
+    },
+    "rating": 4.5,
+    "heroImageUrl": "https://images.unsplash.com/photo-1519810755548-39cd217da494?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Arrival flight",
+        "iconName": "airplane"
+      },
+      {
+        "title": "Stargazing night",
+        "iconName": "star"
+      },
+      {
+        "title": "Boutique stay",
+        "iconName": "bed"
+      }
+    ]
+  },
+  {
+    "id": "bundle-056",
+    "destination": "Queenstown, New Zealand",
+    "tripType": "villa",
+    "price": {
+      "amount": 139500,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 7,
+      "nights": 6
+    },
+    "rating": 4,
+    "heroImageUrl": "https://images.unsplash.com/photo-1530841377377-3ff06c0ca713?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Cycling trail",
+        "iconName": "bicycle"
+      },
+      {
+        "title": "Guided exploration",
+        "iconName": "compass"
+      },
+      {
+        "title": "Sunset cruise",
+        "iconName": "boat"
+      }
+    ]
+  },
+  {
+    "id": "bundle-057",
+    "destination": "Andaman Islands, India",
+    "tripType": "experience",
+    "price": {
+      "amount": 14500,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 4,
+      "nights": 3
+    },
+    "rating": 5,
+    "heroImageUrl": "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Welcome hamper",
+        "iconName": "gift"
+      },
+      {
+        "title": "Heritage homestay",
+        "iconName": "home"
+      },
+      {
+        "title": "Private beach day",
+        "iconName": "partly-sunny"
+      },
+      {
+        "title": "Cycling trail",
+        "iconName": "bicycle"
+      }
+    ]
+  },
+  {
+    "id": "bundle-058",
+    "destination": "Bali, Indonesia",
+    "tripType": "flightStay",
+    "price": {
+      "amount": 45000,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 9,
+      "nights": 8
+    },
+    "rating": 4.3,
+    "heroImageUrl": "https://images.unsplash.com/photo-1473625247510-8ceb1760943f?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Old town walking tour",
+        "iconName": "walk"
+      },
+      {
+        "title": "Welcome hamper",
+        "iconName": "gift"
+      },
+      {
+        "title": "Café hopping",
+        "iconName": "cafe"
+      }
+    ]
+  },
+  {
+    "id": "bundle-059",
+    "destination": "Kerala, India",
+    "tripType": "villa",
+    "price": {
+      "amount": 171000,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 4,
+      "nights": 3
+    },
+    "rating": 4.3,
+    "heroImageUrl": "https://images.unsplash.com/photo-1542640244-7e672d6cef4e?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Sunset viewpoint",
+        "iconName": "camera"
+      },
+      {
+        "title": "Stargazing night",
+        "iconName": "star"
+      },
+      {
+        "title": "Welcome hamper",
+        "iconName": "gift"
+      }
+    ]
+  },
+  {
+    "id": "bundle-060",
+    "destination": "Reykjavik, Iceland",
+    "tripType": "experience",
+    "price": {
+      "amount": 11500,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 5,
+      "nights": 4
+    },
+    "rating": 3.8,
+    "heroImageUrl": "https://images.unsplash.com/photo-1502920917128-1aa500764cbd?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Café hopping",
+        "iconName": "cafe"
+      },
+      {
+        "title": "Sunset cruise",
+        "iconName": "boat"
+      },
+      {
+        "title": "Live music night",
+        "iconName": "musical-notes"
+      }
+    ]
+  },
+  {
+    "id": "bundle-061",
+    "destination": "Dubai, UAE",
+    "tripType": "flightStay",
+    "price": {
+      "amount": 85500,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 6,
+      "nights": 5
+    },
+    "rating": 4.6,
+    "heroImageUrl": "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Stargazing night",
+        "iconName": "star"
+      },
+      {
+        "title": "Café hopping",
+        "iconName": "cafe"
+      },
+      {
+        "title": "Heritage homestay",
+        "iconName": "home"
+      }
+    ]
+  },
+  {
+    "id": "bundle-062",
+    "destination": "Bangkok, Thailand",
+    "tripType": "villa",
+    "price": {
+      "amount": 170000,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 4,
+      "nights": 3
+    },
+    "rating": 4.4,
+    "heroImageUrl": "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Old town walking tour",
+        "iconName": "walk"
+      },
+      {
+        "title": "Stargazing night",
+        "iconName": "star"
+      },
+      {
+        "title": "Private beach day",
+        "iconName": "partly-sunny"
+      }
+    ]
+  },
+  {
+    "id": "bundle-063",
+    "destination": "Rishikesh, India",
+    "tripType": "experience",
+    "price": {
+      "amount": 26000,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 4,
+      "nights": 3
+    },
+    "rating": 4.2,
+    "heroImageUrl": "https://images.unsplash.com/photo-1502920917128-1aa500764cbd?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Local food tour",
+        "iconName": "restaurant"
+      },
+      {
+        "title": "Botanical gardens",
+        "iconName": "leaf"
+      },
+      {
+        "title": "Arrival flight",
+        "iconName": "airplane"
+      },
+      {
+        "title": "Spa & wellness",
+        "iconName": "sparkles"
+      }
+    ]
+  },
+  {
+    "id": "bundle-064",
+    "destination": "Mauritius",
+    "tripType": "flightStay",
+    "price": {
+      "amount": 111000,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 9,
+      "nights": 8
+    },
+    "rating": 4.3,
+    "heroImageUrl": "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Cycling trail",
+        "iconName": "bicycle"
+      },
+      {
+        "title": "Private beach day",
+        "iconName": "partly-sunny"
+      },
+      {
+        "title": "Snorkel session",
+        "iconName": "fish"
+      }
+    ]
+  },
+  {
+    "id": "bundle-065",
+    "destination": "Hoi An, Vietnam",
+    "tripType": "villa",
+    "price": {
+      "amount": 247000,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 7,
+      "nights": 6
+    },
+    "rating": 4.1,
+    "heroImageUrl": "https://images.unsplash.com/photo-1507608616759-54f48f0af0ee?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Botanical gardens",
+        "iconName": "leaf"
+      },
+      {
+        "title": "Heritage homestay",
+        "iconName": "home"
+      },
+      {
+        "title": "Private beach day",
+        "iconName": "partly-sunny"
+      }
+    ]
+  },
+  {
+    "id": "bundle-066",
+    "destination": "Lisbon, Portugal",
+    "tripType": "experience",
+    "price": {
+      "amount": 30000,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 4,
+      "nights": 3
+    },
+    "rating": 4.2,
+    "heroImageUrl": "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Private beach day",
+        "iconName": "partly-sunny"
+      },
+      {
+        "title": "Sunset cruise",
+        "iconName": "boat"
+      },
+      {
+        "title": "Vineyard tasting",
+        "iconName": "wine"
+      }
+    ]
+  },
+  {
+    "id": "bundle-067",
+    "destination": "Phuket, Thailand",
+    "tripType": "flightStay",
+    "price": {
+      "amount": 39500,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 7,
+      "nights": 6
+    },
+    "rating": 4.6,
+    "heroImageUrl": "https://images.unsplash.com/photo-1473496169904-658ba7c44d8a?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Boutique stay",
+        "iconName": "bed"
+      },
+      {
+        "title": "Sunset viewpoint",
+        "iconName": "camera"
+      },
+      {
+        "title": "Beach bonfire",
+        "iconName": "flame"
+      },
+      {
+        "title": "Heritage homestay",
+        "iconName": "home"
+      }
+    ]
+  },
+  {
+    "id": "bundle-068",
+    "destination": "Sri Lanka",
+    "tripType": "villa",
+    "price": {
+      "amount": 125000,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 4,
+      "nights": 3
+    },
+    "rating": 5,
+    "heroImageUrl": "https://images.unsplash.com/photo-1504609813442-a8924e83f76e?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Café hopping",
+        "iconName": "cafe"
+      },
+      {
+        "title": "Heritage homestay",
+        "iconName": "home"
+      },
+      {
+        "title": "Guided exploration",
+        "iconName": "compass"
+      }
+    ]
+  },
+  {
+    "id": "bundle-069",
+    "destination": "Sri Lanka",
+    "tripType": "experience",
+    "price": {
+      "amount": 31500,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 4,
+      "nights": 3
+    },
+    "rating": 3.9,
+    "heroImageUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Sunset viewpoint",
+        "iconName": "camera"
+      },
+      {
+        "title": "Old town walking tour",
+        "iconName": "walk"
+      },
+      {
+        "title": "Welcome hamper",
+        "iconName": "gift"
+      },
+      {
+        "title": "Arrival flight",
+        "iconName": "airplane"
+      }
+    ]
+  },
+  {
+    "id": "bundle-070",
+    "destination": "Ladakh, India",
+    "tripType": "flightStay",
+    "price": {
+      "amount": 44500,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 8,
+      "nights": 7
+    },
+    "rating": 4.4,
+    "heroImageUrl": "https://images.unsplash.com/photo-1493606278519-11aa9f86e40a?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Old town walking tour",
+        "iconName": "walk"
+      },
+      {
+        "title": "Café hopping",
+        "iconName": "cafe"
+      },
+      {
+        "title": "Waterfall trek",
+        "iconName": "water"
+      },
+      {
+        "title": "Cycling trail",
+        "iconName": "bicycle"
+      }
+    ]
+  },
+  {
+    "id": "bundle-071",
+    "destination": "Ladakh, India",
+    "tripType": "villa",
+    "price": {
+      "amount": 113500,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 8,
+      "nights": 7
+    },
+    "rating": 4.5,
+    "heroImageUrl": "https://images.unsplash.com/photo-1517760444937-f6397edcbbcd?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Local food tour",
+        "iconName": "restaurant"
+      },
+      {
+        "title": "Vineyard tasting",
+        "iconName": "wine"
+      },
+      {
+        "title": "Sunset viewpoint",
+        "iconName": "camera"
+      },
+      {
+        "title": "Old town walking tour",
+        "iconName": "walk"
+      }
+    ]
+  },
+  {
+    "id": "bundle-072",
+    "destination": "Mauritius",
+    "tripType": "experience",
+    "price": {
+      "amount": 11500,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 5,
+      "nights": 4
+    },
+    "rating": 3.9,
+    "heroImageUrl": "https://images.unsplash.com/photo-1517760444937-f6397edcbbcd?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Private beach day",
+        "iconName": "partly-sunny"
+      },
+      {
+        "title": "Local food tour",
+        "iconName": "restaurant"
+      },
+      {
+        "title": "Botanical gardens",
+        "iconName": "leaf"
+      }
+    ]
+  },
+  {
+    "id": "bundle-073",
+    "destination": "Pondicherry, India",
+    "tripType": "flightStay",
+    "price": {
+      "amount": 78500,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 9,
+      "nights": 8
+    },
+    "rating": 5,
+    "heroImageUrl": "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Sunset cruise",
+        "iconName": "boat"
+      },
+      {
+        "title": "Beach bonfire",
+        "iconName": "flame"
+      },
+      {
+        "title": "Café hopping",
+        "iconName": "cafe"
+      },
+      {
+        "title": "Stargazing night",
+        "iconName": "star"
+      }
+    ]
+  },
+  {
+    "id": "bundle-074",
+    "destination": "Maldives",
+    "tripType": "villa",
+    "price": {
+      "amount": 218000,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 8,
+      "nights": 7
+    },
+    "rating": 4.9,
+    "heroImageUrl": "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Old town walking tour",
+        "iconName": "walk"
+      },
+      {
+        "title": "Cycling trail",
+        "iconName": "bicycle"
+      },
+      {
+        "title": "Private beach day",
+        "iconName": "partly-sunny"
+      },
+      {
+        "title": "Beach bonfire",
+        "iconName": "flame"
+      }
+    ]
+  },
+  {
+    "id": "bundle-075",
+    "destination": "Dubai, UAE",
+    "tripType": "experience",
+    "price": {
+      "amount": 16500,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 5,
+      "nights": 4
+    },
+    "rating": 4.3,
+    "heroImageUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Guided exploration",
+        "iconName": "compass"
+      },
+      {
+        "title": "Waterfall trek",
+        "iconName": "water"
+      },
+      {
+        "title": "Old town walking tour",
+        "iconName": "walk"
+      },
+      {
+        "title": "Snorkel session",
+        "iconName": "fish"
+      }
+    ]
+  },
+  {
+    "id": "bundle-076",
+    "destination": "Udaipur, India",
+    "tripType": "flightStay",
+    "price": {
+      "amount": 37500,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 7,
+      "nights": 6
+    },
+    "rating": 4,
+    "heroImageUrl": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Spa & wellness",
+        "iconName": "sparkles"
+      },
+      {
+        "title": "Waterfall trek",
+        "iconName": "water"
+      },
+      {
+        "title": "Welcome hamper",
+        "iconName": "gift"
+      }
+    ]
+  },
+  {
+    "id": "bundle-077",
+    "destination": "Udaipur, India",
+    "tripType": "villa",
+    "price": {
+      "amount": 175500,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 7,
+      "nights": 6
+    },
+    "rating": 4.3,
+    "heroImageUrl": "https://images.unsplash.com/photo-1519810755548-39cd217da494?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Guided exploration",
+        "iconName": "compass"
+      },
+      {
+        "title": "Spa & wellness",
+        "iconName": "sparkles"
+      },
+      {
+        "title": "Old town walking tour",
+        "iconName": "walk"
+      },
+      {
+        "title": "Waterfall trek",
+        "iconName": "water"
+      }
+    ]
+  },
+  {
+    "id": "bundle-078",
+    "destination": "Queenstown, New Zealand",
+    "tripType": "experience",
+    "price": {
+      "amount": 16000,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 3,
+      "nights": 2
+    },
+    "rating": 3.9,
+    "heroImageUrl": "https://images.unsplash.com/photo-1505228395891-9a51e7e86bf6?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Snorkel session",
+        "iconName": "fish"
+      },
+      {
+        "title": "Waterfall trek",
+        "iconName": "water"
+      },
+      {
+        "title": "Sunset cruise",
+        "iconName": "boat"
+      }
+    ]
+  },
+  {
+    "id": "bundle-079",
+    "destination": "Kyoto, Japan",
+    "tripType": "flightStay",
+    "price": {
+      "amount": 45500,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 9,
+      "nights": 8
+    },
+    "rating": 4.3,
+    "heroImageUrl": "https://images.unsplash.com/photo-1519810755548-39cd217da494?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Snorkel session",
+        "iconName": "fish"
+      },
+      {
+        "title": "Spa & wellness",
+        "iconName": "sparkles"
+      },
+      {
+        "title": "Arrival flight",
+        "iconName": "airplane"
+      },
+      {
+        "title": "Private beach day",
+        "iconName": "partly-sunny"
+      }
+    ]
+  },
+  {
+    "id": "bundle-080",
+    "destination": "Andaman Islands, India",
+    "tripType": "villa",
+    "price": {
+      "amount": 186500,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 6,
+      "nights": 5
+    },
+    "rating": 4.2,
+    "heroImageUrl": "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Boutique stay",
+        "iconName": "bed"
+      },
+      {
+        "title": "Sunset viewpoint",
+        "iconName": "camera"
+      },
+      {
+        "title": "Cycling trail",
+        "iconName": "bicycle"
+      }
+    ]
+  },
+  {
+    "id": "bundle-081",
+    "destination": "Dubai, UAE",
+    "tripType": "experience",
+    "price": {
+      "amount": 11000,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 5,
+      "nights": 4
+    },
+    "rating": 4.6,
+    "heroImageUrl": "https://images.unsplash.com/photo-1493780474015-ba834fd0ce2f?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Stargazing night",
+        "iconName": "star"
+      },
+      {
+        "title": "Guided exploration",
+        "iconName": "compass"
+      },
+      {
+        "title": "Local food tour",
+        "iconName": "restaurant"
+      },
+      {
+        "title": "Botanical gardens",
+        "iconName": "leaf"
+      }
+    ]
+  },
+  {
+    "id": "bundle-082",
+    "destination": "Andaman Islands, India",
+    "tripType": "flightStay",
+    "price": {
+      "amount": 118500,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 8,
+      "nights": 7
+    },
+    "rating": 5,
+    "heroImageUrl": "https://images.unsplash.com/photo-1502920917128-1aa500764cbd?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Botanical gardens",
+        "iconName": "leaf"
+      },
+      {
+        "title": "Beach bonfire",
+        "iconName": "flame"
+      },
+      {
+        "title": "Old town walking tour",
+        "iconName": "walk"
+      },
+      {
+        "title": "Waterfall trek",
+        "iconName": "water"
+      }
+    ]
+  },
+  {
+    "id": "bundle-083",
+    "destination": "Andaman Islands, India",
+    "tripType": "villa",
+    "price": {
+      "amount": 82000,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 8,
+      "nights": 7
+    },
+    "rating": 4.8,
+    "heroImageUrl": "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Vineyard tasting",
+        "iconName": "wine"
+      },
+      {
+        "title": "Beach bonfire",
+        "iconName": "flame"
+      },
+      {
+        "title": "Spa & wellness",
+        "iconName": "sparkles"
+      },
+      {
+        "title": "Boutique stay",
+        "iconName": "bed"
+      }
+    ]
+  },
+  {
+    "id": "bundle-084",
+    "destination": "Udaipur, India",
+    "tripType": "experience",
+    "price": {
+      "amount": 34500,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 3,
+      "nights": 2
+    },
+    "rating": 4.7,
+    "heroImageUrl": "https://images.unsplash.com/photo-1493558103817-58b2924bce98?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Café hopping",
+        "iconName": "cafe"
+      },
+      {
+        "title": "Waterfall trek",
+        "iconName": "water"
+      },
+      {
+        "title": "Private beach day",
+        "iconName": "partly-sunny"
+      }
+    ]
+  },
+  {
+    "id": "bundle-085",
+    "destination": "Banff, Canada",
+    "tripType": "flightStay",
+    "price": {
+      "amount": 110000,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 7,
+      "nights": 6
+    },
+    "rating": 4.1,
+    "heroImageUrl": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Sunset cruise",
+        "iconName": "boat"
+      },
+      {
+        "title": "Vineyard tasting",
+        "iconName": "wine"
+      },
+      {
+        "title": "Cycling trail",
+        "iconName": "bicycle"
+      },
+      {
+        "title": "Spa & wellness",
+        "iconName": "sparkles"
+      }
+    ]
+  },
+  {
+    "id": "bundle-086",
+    "destination": "Bali, Indonesia",
+    "tripType": "villa",
+    "price": {
+      "amount": 247000,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 4,
+      "nights": 3
+    },
+    "rating": 4.3,
+    "heroImageUrl": "https://images.unsplash.com/photo-1483721310020-03333e577078?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Spa & wellness",
+        "iconName": "sparkles"
+      },
+      {
+        "title": "Waterfall trek",
+        "iconName": "water"
+      },
+      {
+        "title": "Private beach day",
+        "iconName": "partly-sunny"
+      }
+    ]
+  },
+  {
+    "id": "bundle-087",
+    "destination": "Phuket, Thailand",
+    "tripType": "experience",
+    "price": {
+      "amount": 9000,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 3,
+      "nights": 2
+    },
+    "rating": 4.7,
+    "heroImageUrl": "https://images.unsplash.com/photo-1502920917128-1aa500764cbd?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Arrival flight",
+        "iconName": "airplane"
+      },
+      {
+        "title": "Guided exploration",
+        "iconName": "compass"
+      },
+      {
+        "title": "Private beach day",
+        "iconName": "partly-sunny"
+      }
+    ]
+  },
+  {
+    "id": "bundle-088",
+    "destination": "Phuket, Thailand",
+    "tripType": "flightStay",
+    "price": {
+      "amount": 108000,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 6,
+      "nights": 5
+    },
+    "rating": 4,
+    "heroImageUrl": "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Café hopping",
+        "iconName": "cafe"
+      },
+      {
+        "title": "Boutique stay",
+        "iconName": "bed"
+      },
+      {
+        "title": "Beach bonfire",
+        "iconName": "flame"
+      },
+      {
+        "title": "Live music night",
+        "iconName": "musical-notes"
+      }
+    ]
+  },
+  {
+    "id": "bundle-089",
+    "destination": "Sri Lanka",
+    "tripType": "villa",
+    "price": {
+      "amount": 231500,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 7,
+      "nights": 6
+    },
+    "rating": 4.5,
+    "heroImageUrl": "https://images.unsplash.com/photo-1473625247510-8ceb1760943f?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Beach bonfire",
+        "iconName": "flame"
+      },
+      {
+        "title": "Sunset cruise",
+        "iconName": "boat"
+      },
+      {
+        "title": "Welcome hamper",
+        "iconName": "gift"
+      }
+    ]
+  },
+  {
+    "id": "bundle-090",
+    "destination": "Mauritius",
+    "tripType": "experience",
+    "price": {
+      "amount": 24500,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 4,
+      "nights": 3
+    },
+    "rating": 4.5,
+    "heroImageUrl": "https://images.unsplash.com/photo-1502920917128-1aa500764cbd?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Guided exploration",
+        "iconName": "compass"
+      },
+      {
+        "title": "Live music night",
+        "iconName": "musical-notes"
+      },
+      {
+        "title": "Welcome hamper",
+        "iconName": "gift"
+      },
+      {
+        "title": "Stargazing night",
+        "iconName": "star"
+      }
+    ]
+  },
+  {
+    "id": "bundle-091",
+    "destination": "Bhutan",
+    "tripType": "flightStay",
+    "price": {
+      "amount": 90000,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 5,
+      "nights": 4
+    },
+    "rating": 4.1,
+    "heroImageUrl": "https://images.unsplash.com/photo-1504457047772-27faf1c00561?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Café hopping",
+        "iconName": "cafe"
+      },
+      {
+        "title": "Spa & wellness",
+        "iconName": "sparkles"
+      },
+      {
+        "title": "Live music night",
+        "iconName": "musical-notes"
+      }
+    ]
+  },
+  {
+    "id": "bundle-092",
+    "destination": "Hoi An, Vietnam",
+    "tripType": "villa",
+    "price": {
+      "amount": 186500,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 4,
+      "nights": 3
+    },
+    "rating": 4.5,
+    "heroImageUrl": "https://images.unsplash.com/photo-1473496169904-658ba7c44d8a?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Local food tour",
+        "iconName": "restaurant"
+      },
+      {
+        "title": "Guided exploration",
+        "iconName": "compass"
+      },
+      {
+        "title": "Boutique stay",
+        "iconName": "bed"
+      }
+    ]
+  },
+  {
+    "id": "bundle-093",
+    "destination": "Andaman Islands, India",
+    "tripType": "experience",
+    "price": {
+      "amount": 10500,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 5,
+      "nights": 4
+    },
+    "rating": 4.4,
+    "heroImageUrl": "https://images.unsplash.com/photo-1493558103817-58b2924bce98?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Sunset viewpoint",
+        "iconName": "camera"
+      },
+      {
+        "title": "Old town walking tour",
+        "iconName": "walk"
+      },
+      {
+        "title": "Snorkel session",
+        "iconName": "fish"
+      }
+    ]
+  },
+  {
+    "id": "bundle-094",
+    "destination": "Udaipur, India",
+    "tripType": "flightStay",
+    "price": {
+      "amount": 69500,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 9,
+      "nights": 8
+    },
+    "rating": 4.8,
+    "heroImageUrl": "https://images.unsplash.com/photo-1483721310020-03333e577078?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Heritage homestay",
+        "iconName": "home"
+      },
+      {
+        "title": "Live music night",
+        "iconName": "musical-notes"
+      },
+      {
+        "title": "Botanical gardens",
+        "iconName": "leaf"
+      },
+      {
+        "title": "Sunset cruise",
+        "iconName": "boat"
+      }
+    ]
+  },
+  {
+    "id": "bundle-095",
+    "destination": "Prague, Czechia",
+    "tripType": "villa",
+    "price": {
+      "amount": 211000,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 6,
+      "nights": 5
+    },
+    "rating": 4.5,
+    "heroImageUrl": "https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Old town walking tour",
+        "iconName": "walk"
+      },
+      {
+        "title": "Guided exploration",
+        "iconName": "compass"
+      },
+      {
+        "title": "Sunset cruise",
+        "iconName": "boat"
+      },
+      {
+        "title": "Boutique stay",
+        "iconName": "bed"
+      }
+    ]
+  },
+  {
+    "id": "bundle-096",
+    "destination": "Santorini, Greece",
+    "tripType": "experience",
+    "price": {
+      "amount": 11500,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 3,
+      "nights": 2
+    },
+    "rating": 5,
+    "heroImageUrl": "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Live music night",
+        "iconName": "musical-notes"
+      },
+      {
+        "title": "Local food tour",
+        "iconName": "restaurant"
+      },
+      {
+        "title": "Heritage homestay",
+        "iconName": "home"
+      },
+      {
+        "title": "Sunset viewpoint",
+        "iconName": "camera"
+      }
+    ]
+  },
+  {
+    "id": "bundle-097",
+    "destination": "Cape Town, South Africa",
+    "tripType": "flightStay",
+    "price": {
+      "amount": 41000,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 7,
+      "nights": 6
+    },
+    "rating": 3.8,
+    "heroImageUrl": "https://images.unsplash.com/photo-1517760444937-f6397edcbbcd?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Local food tour",
+        "iconName": "restaurant"
+      },
+      {
+        "title": "Welcome hamper",
+        "iconName": "gift"
+      },
+      {
+        "title": "Botanical gardens",
+        "iconName": "leaf"
+      },
+      {
+        "title": "Private beach day",
+        "iconName": "partly-sunny"
+      }
+    ]
+  },
+  {
+    "id": "bundle-098",
+    "destination": "Hoi An, Vietnam",
+    "tripType": "villa",
+    "price": {
+      "amount": 147000,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 8,
+      "nights": 7
+    },
+    "rating": 4.1,
+    "heroImageUrl": "https://images.unsplash.com/photo-1499678329028-101435549a4e?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Cycling trail",
+        "iconName": "bicycle"
+      },
+      {
+        "title": "Vineyard tasting",
+        "iconName": "wine"
+      },
+      {
+        "title": "Live music night",
+        "iconName": "musical-notes"
+      },
+      {
+        "title": "Spa & wellness",
+        "iconName": "sparkles"
+      }
+    ]
+  },
+  {
+    "id": "bundle-099",
+    "destination": "Goa, India",
+    "tripType": "experience",
+    "price": {
+      "amount": 9000,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 3,
+      "nights": 2
+    },
+    "rating": 4.4,
+    "heroImageUrl": "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Private beach day",
+        "iconName": "partly-sunny"
+      },
+      {
+        "title": "Sunset viewpoint",
+        "iconName": "camera"
+      },
+      {
+        "title": "Stargazing night",
+        "iconName": "star"
+      }
+    ]
+  },
+  {
+    "id": "bundle-100",
+    "destination": "Prague, Czechia",
+    "tripType": "flightStay",
+    "price": {
+      "amount": 80500,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 7,
+      "nights": 6
+    },
+    "rating": 4.5,
+    "heroImageUrl": "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Boutique stay",
+        "iconName": "bed"
+      },
+      {
+        "title": "Old town walking tour",
+        "iconName": "walk"
+      },
+      {
+        "title": "Botanical gardens",
+        "iconName": "leaf"
+      },
+      {
+        "title": "Stargazing night",
+        "iconName": "star"
+      }
+    ]
+  },
+  {
+    "id": "bundle-101",
+    "destination": "Prague, Czechia",
+    "tripType": "villa",
+    "price": {
+      "amount": 88500,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 5,
+      "nights": 4
+    },
+    "rating": 4.8,
+    "heroImageUrl": "https://images.unsplash.com/photo-1528127269322-539801943592?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Waterfall trek",
+        "iconName": "water"
+      },
+      {
+        "title": "Sunset viewpoint",
+        "iconName": "camera"
+      },
+      {
+        "title": "Old town walking tour",
+        "iconName": "walk"
+      }
+    ]
+  },
+  {
+    "id": "bundle-102",
+    "destination": "Cusco, Peru",
+    "tripType": "experience",
+    "price": {
+      "amount": 9000,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 5,
+      "nights": 4
+    },
+    "rating": 5,
+    "heroImageUrl": "https://images.unsplash.com/photo-1528127269322-539801943592?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Boutique stay",
+        "iconName": "bed"
+      },
+      {
+        "title": "Vineyard tasting",
+        "iconName": "wine"
+      },
+      {
+        "title": "Heritage homestay",
+        "iconName": "home"
+      },
+      {
+        "title": "Welcome hamper",
+        "iconName": "gift"
+      }
+    ]
+  },
+  {
+    "id": "bundle-103",
+    "destination": "Andaman Islands, India",
+    "tripType": "flightStay",
+    "price": {
+      "amount": 83500,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 6,
+      "nights": 5
+    },
+    "rating": 4.3,
+    "heroImageUrl": "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Boutique stay",
+        "iconName": "bed"
+      },
+      {
+        "title": "Stargazing night",
+        "iconName": "star"
+      },
+      {
+        "title": "Local food tour",
+        "iconName": "restaurant"
+      },
+      {
+        "title": "Heritage homestay",
+        "iconName": "home"
+      }
+    ]
+  },
+  {
+    "id": "bundle-104",
+    "destination": "Pondicherry, India",
+    "tripType": "villa",
+    "price": {
+      "amount": 194500,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 4,
+      "nights": 3
+    },
+    "rating": 4.9,
+    "heroImageUrl": "https://images.unsplash.com/photo-1505228395891-9a51e7e86bf6?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Waterfall trek",
+        "iconName": "water"
+      },
+      {
+        "title": "Spa & wellness",
+        "iconName": "sparkles"
+      },
+      {
+        "title": "Local food tour",
+        "iconName": "restaurant"
+      },
+      {
+        "title": "Vineyard tasting",
+        "iconName": "wine"
+      }
+    ]
+  },
+  {
+    "id": "bundle-105",
+    "destination": "Jaipur, India",
+    "tripType": "experience",
+    "price": {
+      "amount": 17000,
+      "currency": "INR"
+    },
+    "duration": {
+      "days": 4,
+      "nights": 3
+    },
+    "rating": 3.8,
+    "heroImageUrl": "https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?w=800&q=70&auto=format",
+    "highlights": [
+      {
+        "title": "Local food tour",
+        "iconName": "restaurant"
+      },
+      {
+        "title": "Sunset viewpoint",
+        "iconName": "camera"
+      },
+      {
+        "title": "Old town walking tour",
+        "iconName": "walk"
+      }
+    ]
+  }
+]
