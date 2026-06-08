@@ -1,6 +1,7 @@
 import { Ionicons } from '@expo/vector-icons';
 import { Image } from 'expo-image';
 import { LinearGradient } from 'expo-linear-gradient';
+import { useEffect } from 'react';
 import {
   Pressable,
   StyleSheet,
@@ -9,7 +10,13 @@ import {
   type TextStyle,
   type ViewStyle,
 } from 'react-native';
+import Animated, {
+  useAnimatedStyle,
+  useSharedValue,
+  withTiming,
+} from 'react-native-reanimated';
 
+import { DayHighlightsRow } from '@/components/day-highlights-row';
 import { useFeedStore } from '@/store/feedStore';
 import type { Bundle, TripType } from '@/types/bundle';
 import {
@@ -25,6 +32,18 @@ function handlePress(id: string) {
 }
 
 export function BundleCard({ bundle }: Props) {
+  const isExpanded = useFeedStore((s) => s.expandedId === bundle.id);
+  const progress = useSharedValue(isExpanded ? 1 : 0);
+
+  useEffect(() => {
+    progress.value = withTiming(isExpanded ? 1 : 0, { duration: 220 });
+  }, [isExpanded, progress]);
+
+  const detailsStyle = useAnimatedStyle(() => ({
+    height: progress.value * DETAILS_HEIGHT,
+    opacity: progress.value,
+  }));
+
   return (
     <Pressable
       style={styles.card}
@@ -71,12 +90,16 @@ export function BundleCard({ bundle }: Props) {
           <Text style={styles.price}>{formatPrice(bundle.price.amount)}</Text>
         </View>
       </View>
+      <Animated.View style={[styles.details, detailsStyle]}>
+        <DayHighlightsRow highlights={bundle.highlights} />
+      </Animated.View>
     </Pressable>
   );
 }
 
 const IMAGE_HEIGHT = 190;
 const CARD_RADIUS = 14;
+const DETAILS_HEIGHT = 68;
 
 const ANDROID_RIPPLE = { color: 'rgba(0,0,0,0.08)' } as const;
 
@@ -121,6 +144,11 @@ const styles = StyleSheet.create({
   rating: { fontSize: 14, fontWeight: '600', color: '#475569' },
   duration: { fontSize: 14, color: '#475569', fontWeight: '500' },
   price: { fontSize: 18, fontWeight: '700', color: '#0F172A' },
+  details: {
+    overflow: 'hidden',
+    borderTopWidth: StyleSheet.hairlineWidth,
+    borderTopColor: '#E2E8F0',
+  },
 });
 
 const badgeBase = {

@@ -98,11 +98,11 @@ Legend: `[ ]` open · `[x]` done · `(FRx.y)` ties to a requirement.
 - Only one card expanded at a time *or* multi-expand — make a call and document.
 
 **Tasks**
-- [ ] Add `expandedId` state (per-screen or in store).
-- [ ] Animate height with Reanimated `Layout` or `withTiming` on measured height.
-- [ ] Build `DayHighlightsRow` with horizontal scroll.
-- [ ] Use an icon set already shipped with Expo (`@expo/vector-icons`).
-- [ ] Ensure expand does not invalidate FlashList item recycling.
+- [x] Add `expandedId` state. (Lives in `feedStore`; single-expand semantics — tapping a second card collapses the first. Switching to multi-expand would mean reshaping the store to `Set<string>`.)
+- [x] Animate height with Reanimated. `useSharedValue` + `useEffect` + `withTiming(220ms)` driving height + opacity on a hairline-bordered details container. Fixed `DETAILS_HEIGHT` constant avoids on-tap measurement work.
+- [x] Build `DayHighlightsRow` with horizontal `ScrollView` (not FlashList — 3–4 items don't need virtualisation).
+- [x] Use `@expo/vector-icons` Ionicons. (Already wired in 1.3.)
+- [x] Card uses a narrow zustand selector (`s.expandedId === bundle.id`), so only the two affected cards re-render per toggle. Caveat: when a card recycles into a new bundle slot, the shared value carries over and the recycled card briefly animates to its new state — visible only at extreme scroll speeds; revisit in 4.1 if it shows up.
 
 ### Story 1.5 — Floating action button to open AI sheet
 **As a user, I want a persistent FAB so I can summon the AI assistant anywhere on the feed.** (FR1.7, NFR2)
