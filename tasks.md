@@ -113,9 +113,9 @@ Legend: `[ ]` open · `[x]` done · `(FRx.y)` ties to a requirement.
 - FAB hides or fades when sheet is at full height (optional polish).
 
 **Tasks**
-- [ ] Build `Fab` component.
-- [ ] Trigger `bottomSheetRef.current?.snapToIndex(0)`.
-- [ ] Verify with React DevTools that `FeedScreen` does not re-render on open/close.
+- [x] Build `Fab` component. Circular Animated.View, sparkles Ionicon, positioned via `useSafeAreaInsets`. Opacity + scale interpolated from sheet `animatedIndex` shared value — fade entirely on UI thread, no React state involvement.
+- [x] Trigger sheet via `sheetRef.current?.present()` (gorhom v5 imperative modal API). Wired in `app/index.tsx` `onPress`.
+- [x] FeedScreen does not re-render on open/close: sheet open state lives in a Reanimated shared value + a stable `useRef`. No props or selectors observe it, so the React tree above the sheet stays untouched.
 
 ---
 
@@ -131,10 +131,10 @@ Legend: `[ ]` open · `[x]` done · `(FRx.y)` ties to a requirement.
 - Feed remains visible and scrollable behind the sheet.
 
 **Tasks**
-- [ ] Mount `BottomSheet` (or `BottomSheetModal`) in the root layout, not inside the feed.
-- [ ] Configure `snapPoints={['50%', '92%']}`.
-- [ ] Set `enablePanDownToClose` per design decision.
-- [ ] Add backdrop (semi-transparent) that does NOT block feed scroll if at peek — decide and document.
+- [x] Used `BottomSheetModal` (not `BottomSheet`). JSX lives in FeedScreen but the modal portals to the root via `BottomSheetModalProvider` (wired in `_layout.tsx`), so "mount at root" is satisfied without threading refs through layout context.
+- [x] `snapPoints={['50%', '92%']}` + `enableDynamicSizing={false}` (gorhom v5 defaults dynamic sizing to true; must disable for fixed snap points).
+- [x] `enablePanDownToClose` enabled — sheet returns to -1 (closed), FAB reappears.
+- [x] Backdrop: `BottomSheetBackdrop` with `appearsOnIndex={1}, disappearsOnIndex={0}`. At peek (0) → no backdrop, feed remains visible *and tappable* behind the sheet (FR2.1). At full (1) → backdrop blocks feed taps (correct modal behavior).
 
 ### Story 2.2 — Chat UI with history
 **As a user, I want my conversation preserved while the app is open so I don't lose context when I close the sheet.** (FR2.3, FR2.5)

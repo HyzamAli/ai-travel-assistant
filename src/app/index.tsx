@@ -1,5 +1,6 @@
+import type { BottomSheetModal } from '@gorhom/bottom-sheet';
 import { FlashList } from '@shopify/flash-list';
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import {
   ActivityIndicator,
   Pressable,
@@ -7,8 +8,11 @@ import {
   View,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { useSharedValue } from 'react-native-reanimated';
 
+import { AISheet } from '@/components/ai-sheet';
 import { BundleCard } from '@/components/bundle-card';
+import { Fab } from '@/components/fab';
 import { ThemedText } from '@/components/themed-text';
 import { useTheme } from '@/hooks/use-theme';
 import { getBundles } from '@/services/bundles';
@@ -36,6 +40,9 @@ export default function FeedScreen() {
   const [status, setStatus] = useState<Status>(
     bundles.length > 0 ? 'ready' : 'loading',
   );
+
+  const sheetRef = useRef<BottomSheetModal>(null);
+  const sheetIndex = useSharedValue(-1);
 
   const load = useCallback(() => {
     setStatus('loading');
@@ -86,6 +93,11 @@ export default function FeedScreen() {
         ListHeaderComponent={ListHeader}
         contentContainerStyle={styles.listContent}
       />
+      <Fab
+        onPress={() => sheetRef.current?.present()}
+        sheetIndex={sheetIndex}
+      />
+      <AISheet ref={sheetRef} animatedIndex={sheetIndex} />
     </SafeAreaView>
   );
 }
