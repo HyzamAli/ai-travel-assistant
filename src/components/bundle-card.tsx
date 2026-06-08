@@ -45,55 +45,56 @@ export function BundleCard({ bundle }: Props) {
   }));
 
   return (
-    <Pressable
-      style={styles.card}
-      onPress={() => handlePress(bundle.id)}
-      android_ripple={ANDROID_RIPPLE}
-    >
-      <View style={styles.imageWrap}>
-        <LinearGradient
-          colors={GRADIENT_COLORS}
-          start={GRADIENT_START}
-          end={GRADIENT_END}
-          style={StyleSheet.absoluteFill}
-        />
-        <Ionicons
-          name="compass-outline"
-          size={36}
-          color="#64748B"
-          accessibilityElementsHidden
-          importantForAccessibility="no-hide-descendants"
-        />
-        <Image
-          source={bundle.heroImageUrl}
-          style={StyleSheet.absoluteFill}
-          contentFit="cover"
-          cachePolicy="memory-disk"
-          recyclingKey={bundle.id}
-          transition={300}
-        />
-      </View>
-      <View style={styles.body}>
-        <View style={styles.row}>
-          <Text style={styles.destination} numberOfLines={1}>
-            {bundle.destination}
-          </Text>
-          <Text style={styles.rating}>★ {bundle.rating.toFixed(1)}</Text>
+    <View style={styles.card}>
+      <Pressable
+        onPress={() => handlePress(bundle.id)}
+        android_ripple={ANDROID_RIPPLE}
+      >
+        <View style={styles.imageWrap}>
+          <LinearGradient
+            colors={GRADIENT_COLORS}
+            start={GRADIENT_START}
+            end={GRADIENT_END}
+            style={StyleSheet.absoluteFill}
+          />
+          <Ionicons
+            name="compass-outline"
+            size={36}
+            color="#64748B"
+            accessibilityElementsHidden
+            importantForAccessibility="no-hide-descendants"
+          />
+          <Image
+            source={bundle.heroImageUrl}
+            style={StyleSheet.absoluteFill}
+            contentFit="cover"
+            cachePolicy="memory-disk"
+            recyclingKey={bundle.id}
+            transition={300}
+          />
         </View>
-        <View style={badgeContainer[bundle.tripType]}>
-          <Text style={badgeText[bundle.tripType]}>
-            {TRIP_TYPE_LABEL[bundle.tripType]}
-          </Text>
+        <View style={styles.body}>
+          <View style={styles.row}>
+            <Text style={styles.destination} numberOfLines={1}>
+              {bundle.destination}
+            </Text>
+            <Text style={styles.rating}>★ {bundle.rating.toFixed(1)}</Text>
+          </View>
+          <View style={badgeContainer[bundle.tripType]}>
+            <Text style={badgeText[bundle.tripType]}>
+              {TRIP_TYPE_LABEL[bundle.tripType]}
+            </Text>
+          </View>
+          <View style={styles.row}>
+            <Text style={styles.duration}>{formatDuration(bundle.duration)}</Text>
+            <Text style={styles.price}>{formatPrice(bundle.price.amount)}</Text>
+          </View>
         </View>
-        <View style={styles.row}>
-          <Text style={styles.duration}>{formatDuration(bundle.duration)}</Text>
-          <Text style={styles.price}>{formatPrice(bundle.price.amount)}</Text>
-        </View>
-      </View>
+      </Pressable>
       <Animated.View style={[styles.details, detailsStyle]}>
         <DayHighlightsRow highlights={bundle.highlights} />
       </Animated.View>
-    </Pressable>
+    </View>
   );
 }
 
