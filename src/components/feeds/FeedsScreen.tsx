@@ -1,68 +1,36 @@
 import { ChatSheet } from '@/components/chat/ChatSheet';
-import { ThemedText } from '@/components/common/ThemedText';
 import { BundleCard } from '@/components/feeds/BundleCard';
 import { Fab } from '@/components/feeds/Fab';
-import { useTheme } from '@/hooks/use-theme';
-import { getBundles } from '@/services/bundles';
-import { useFeedStore } from '@/store/feedStore';
+import { useFeedsScreen } from '@/components/feeds/use-feeds-screen';
 import type { Bundle } from '@/types/bundle';
-import type { BottomSheetModal } from '@gorhom/bottom-sheet';
 import { FlashList } from '@shopify/flash-list';
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { ActivityIndicator, Pressable, StyleSheet, View } from 'react-native';
-import { useSharedValue } from 'react-native-reanimated';
+import {
+  ActivityIndicator,
+  Pressable,
+  StyleSheet,
+  Text,
+  View,
+} from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-
-type Status = 'loading' | 'ready' | 'error';
 
 const renderItem = ({ item }: { item: Bundle }) => <BundleCard bundle={item} />;
 const keyExtractor = (b: Bundle) => b.id;
 
 const ListHeader = () => (
   <View style={styles.header}>
-    <ThemedText type='title'>Discover</ThemedText>
-    <ThemedText type='small' themeColor='textSecondary'>
-      Trips picked for you
-    </ThemedText>
+    <Text style={styles.title}>Discover</Text>
+    <Text style={styles.subtitle}>Trips picked for you</Text>
   </View>
 );
 
 export function FeedsScreen() {
-  const theme = useTheme();
   const insets = useSafeAreaInsets();
-  const bundles = useFeedStore((s) => s.bundles);
-  const setBundles = useFeedStore((s) => s.setBundles);
-  const [status, setStatus] = useState<Status>(
-    bundles.length > 0 ? 'ready' : 'loading',
-  );
-
-  const sheetRef = useRef<BottomSheetModal>(null);
-  const sheetIndex = useSharedValue(-1);
-
-  // FAB is 56pt + 16pt bottom offset + insets.bottom, so the last card needs
-  // ~88pt + insets.bottom of clearance to clear both the FAB and home indicator.
-  const listContentStyle = useMemo(
-    () => ({ paddingBottom: 88 + insets.bottom }),
-    [insets.bottom],
-  );
-
-  const load = useCallback(() => {
-    setStatus('loading');
-    getBundles()
-      .then((data) => {
-        setBundles(data);
-        setStatus('ready');
-      })
-      .catch(() => setStatus('error'));
-  }, [setBundles]);
-
-  useEffect(() => {
-    if (bundles.length === 0) load();
-  }, [bundles.length, load]);
+  const { status, bundles, sheetRef, sheetIndex, load, openChatSheet } =
+    useFeedsScreen();
 
   if (status === 'loading') {
     return (
-      <View style={[styles.centered, { backgroundColor: theme.background }]}>
+      <View style={[styles.container, styles.centered]}>
         <ActivityIndicator />
       </View>
     );
@@ -70,41 +38,37 @@ export function FeedsScreen() {
 
   if (status === 'error') {
     return (
-      <View style={[styles.centered, { backgroundColor: theme.background }]}>
-        <ThemedText type='default'>Couldn't load trips.</ThemedText>
+      <View style={[styles.container, styles.centered]}>
+        <Text style={styles.body}>Couldn't load trips.</Text>
         <Pressable onPress={load} style={styles.retry}>
-          <ThemedText type='linkPrimary'>Tap to retry</ThemedText>
+          <Text style={styles.link}>Tap to retry</Text>
         </Pressable>
       </View>
     );
   }
 
   return (
-    <View
-      style={[
-        styles.container,
-        { backgroundColor: theme.background, paddingTop: insets.top },
-      ]}
-    >
+    <View style={[styles.container, { paddingTop: insets.top }]}>
       <FlashList
         data={bundles}
         renderItem={renderItem}
         keyExtractor={keyExtractor}
         ListHeaderComponent={ListHeader}
-        contentContainerStyle={listContentStyle}
+        contentContainerStyle={{ paddingBottom: insets.bottom + 88 }}
       />
-      <Fab
-        onPress={() => sheetRef.current?.present()}
-        sheetIndex={sheetIndex}
-      />
+      <Fab onPress={openChatSheet} sheetIndex={sheetIndex} />
       <ChatSheet ref={sheetRef} animatedIndex={sheetIndex} />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1 },
-  centered: { flex: 1, alignItems: 'center', justifyContent: 'center', gap: 8 },
+  container: { flex: 1, backgroundColor: '#FFFFFF' },
+  centered: { alignItems: 'center', justifyContent: 'center', gap: 8 },
   retry: { paddingVertical: 8, paddingHorizontal: 16 },
   header: { paddingHorizontal: 16, paddingTop: 8, paddingBottom: 16, gap: 4 },
+  title: { fontSize: 48, lineHeight: 52, fontWeight: '600', color: '#0F172A' },
+  subtitle: { fontSize: 14, lineHeight: 20, color: '#64748B' },
+  body: { fontSize: 16, lineHeight: 24, color: '#0F172A' },
+  link: { fontSize: 14, lineHeight: 20, color: '#2563EB', fontWeight: '600' },
 });
