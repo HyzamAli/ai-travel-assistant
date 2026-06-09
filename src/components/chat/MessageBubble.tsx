@@ -1,11 +1,10 @@
+import { TypingDots } from '@/components/chat/TypingDots';
+import { Message } from '@/types/message';
 import { StyleSheet, Text, View } from 'react-native';
 
-import { TypingDots } from '@/components/chat/TypingDots';
-import type { Message } from '@/store/chatStore';
+type MessageBubbleProps = { message: Message };
 
-type Props = { message: Message };
-
-export function MessageBubble({ message }: Props) {
+export function MessageBubble({ message }: MessageBubbleProps) {
   const isUser = message.role === 'user';
   const isWaiting = message.status === 'sending';
   const isError = message.status === 'error';

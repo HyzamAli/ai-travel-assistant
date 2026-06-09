@@ -13,7 +13,6 @@ type BottomSheetProps = {
   children: ReactNode;
   footer?: ReactNode;
   snapPoints?: string[];
-  onChange?: (index: number) => void;
   animatedIndex?: SharedValue<number>;
 };
 
@@ -27,13 +26,7 @@ function renderBackdrop(props: BottomSheetBackdropProps) {
 
 export const BottomSheet = forwardRef<BottomSheetModal, BottomSheetProps>(
   function BottomSheet(
-    {
-      children,
-      footer,
-      snapPoints = DEFAULT_SNAP_POINTS,
-      onChange,
-      animatedIndex,
-    },
+    { children, footer, snapPoints = DEFAULT_SNAP_POINTS, animatedIndex },
     ref,
   ) {
     const renderFooter = useCallback(
@@ -51,7 +44,6 @@ export const BottomSheet = forwardRef<BottomSheetModal, BottomSheetProps>(
         snapPoints={snapPoints}
         enableDynamicSizing={false}
         enablePanDownToClose
-        onChange={onChange}
         animatedIndex={animatedIndex}
         backdropComponent={renderBackdrop}
         footerComponent={footer ? renderFooter : undefined}

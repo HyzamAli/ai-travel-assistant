@@ -2,7 +2,7 @@ import { ChatComposer } from '@/components/chat/ChatComposer';
 import { MessageBubble } from '@/components/chat/MessageBubble';
 import { useChatSheet } from '@/components/chat/use-chat-sheet';
 import { BottomSheet } from '@/components/modal/BottomSheet';
-import { type Message } from '@/store/chatStore';
+import { Message } from '@/types/message';
 import {
   BottomSheetFlashList,
   type BottomSheetModal,

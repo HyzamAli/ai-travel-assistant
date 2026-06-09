@@ -1,9 +1,9 @@
-import { mockStreamReply } from '@/services/mockStream';
+import { mockStreamReply } from '@/mocks/chatStream';
 import { useChatStore } from '@/store/chatStore';
 
 const FLUSH_MS = 16;
-const EMPTY_REPLY_MESSAGE = "Hmm, no reply came through. Try again?";
-const ERROR_REPLY_MESSAGE = "Something went wrong reaching the assistant.";
+const EMPTY_REPLY_MESSAGE = 'Hmm, no reply came through. Try again?';
+const ERROR_REPLY_MESSAGE = 'Something went wrong reaching the assistant.';
 
 // Monotonic counter so two IDs minted in the same Date.now() tick can't
 // collide. Replaces a 4-char Math.random suffix which had a ~1-in-1.6M

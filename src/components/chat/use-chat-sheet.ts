@@ -1,4 +1,5 @@
-import { useChatStore, type Message } from '@/store/chatStore';
+import { useChatStore } from '@/store/chatStore';
+import { Message } from '@/types/message';
 import type { FlashListRef } from '@shopify/flash-list';
 import { useEffect, useRef } from 'react';
 
