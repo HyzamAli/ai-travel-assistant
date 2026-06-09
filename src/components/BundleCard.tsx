@@ -16,7 +16,7 @@ import Animated, {
   withTiming,
 } from 'react-native-reanimated';
 
-import { DayHighlightsRow } from '@/components/day-highlights-row';
+import { DayHighlightsRow } from '@/components/DayHighlightsRow';
 import { useFeedStore } from '@/store/feedStore';
 import type { Bundle, TripType } from '@/types/bundle';
 import {

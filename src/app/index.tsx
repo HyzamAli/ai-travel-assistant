@@ -1,19 +1,19 @@
 import type { BottomSheetModal } from '@gorhom/bottom-sheet';
 import { FlashList } from '@shopify/flash-list';
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import {
   ActivityIndicator,
   Pressable,
   StyleSheet,
   View,
 } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useSharedValue } from 'react-native-reanimated';
 
-import { AISheet } from '@/components/ai-sheet';
-import { BundleCard } from '@/components/bundle-card';
-import { Fab } from '@/components/fab';
-import { ThemedText } from '@/components/themed-text';
+import { AiSheet } from '@/components/AiSheet';
+import { BundleCard } from '@/components/BundleCard';
+import { Fab } from '@/components/Fab';
+import { ThemedText } from '@/components/ThemedText';
 import { useTheme } from '@/hooks/use-theme';
 import { getBundles } from '@/services/bundles';
 import { useFeedStore } from '@/store/feedStore';
@@ -35,6 +35,7 @@ const ListHeader = () => (
 
 export default function FeedScreen() {
   const theme = useTheme();
+  const insets = useSafeAreaInsets();
   const bundles = useFeedStore((s) => s.bundles);
   const setBundles = useFeedStore((s) => s.setBundles);
   const [status, setStatus] = useState<Status>(
@@ -43,6 +44,13 @@ export default function FeedScreen() {
 
   const sheetRef = useRef<BottomSheetModal>(null);
   const sheetIndex = useSharedValue(-1);
+
+  // FAB is 56pt + 16pt bottom offset + insets.bottom, so the last card needs
+  // ~88pt + insets.bottom of clearance to clear both the FAB and home indicator.
+  const listContentStyle = useMemo(
+    () => ({ paddingBottom: 88 + insets.bottom }),
+    [insets.bottom],
+  );
 
   const load = useCallback(() => {
     setStatus('loading');
@@ -60,45 +68,43 @@ export default function FeedScreen() {
 
   if (status === 'loading') {
     return (
-      <SafeAreaView
-        style={[styles.centered, { backgroundColor: theme.background }]}
-      >
+      <View style={[styles.centered, { backgroundColor: theme.background }]}>
         <ActivityIndicator />
-      </SafeAreaView>
+      </View>
     );
   }
 
   if (status === 'error') {
     return (
-      <SafeAreaView
-        style={[styles.centered, { backgroundColor: theme.background }]}
-      >
+      <View style={[styles.centered, { backgroundColor: theme.background }]}>
         <ThemedText type="default">Couldn't load trips.</ThemedText>
         <Pressable onPress={load} style={styles.retry}>
           <ThemedText type="linkPrimary">Tap to retry</ThemedText>
         </Pressable>
-      </SafeAreaView>
+      </View>
     );
   }
 
   return (
-    <SafeAreaView
-      edges={['top']}
-      style={[styles.container, { backgroundColor: theme.background }]}
+    <View
+      style={[
+        styles.container,
+        { backgroundColor: theme.background, paddingTop: insets.top },
+      ]}
     >
       <FlashList
         data={bundles}
         renderItem={renderItem}
         keyExtractor={keyExtractor}
         ListHeaderComponent={ListHeader}
-        contentContainerStyle={styles.listContent}
+        contentContainerStyle={listContentStyle}
       />
       <Fab
         onPress={() => sheetRef.current?.present()}
         sheetIndex={sheetIndex}
       />
-      <AISheet ref={sheetRef} animatedIndex={sheetIndex} />
-    </SafeAreaView>
+      <AiSheet ref={sheetRef} animatedIndex={sheetIndex} />
+    </View>
   );
 }
 
@@ -107,5 +113,4 @@ const styles = StyleSheet.create({
   centered: { flex: 1, alignItems: 'center', justifyContent: 'center', gap: 8 },
   retry: { paddingVertical: 8, paddingHorizontal: 16 },
   header: { paddingHorizontal: 16, paddingTop: 8, paddingBottom: 16, gap: 4 },
-  listContent: { paddingBottom: 24 },
 });
