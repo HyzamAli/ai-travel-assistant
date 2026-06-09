@@ -355,9 +355,9 @@ Legend: `[ ]` open · `[x]` done · `(FRx.y)` ties to a requirement.
 
 **Tasks**
 
-- [ ] Draft methodology section.
-- [ ] Capture before/after numbers from Story 4.1.
-- [ ] Write trade-off section.
+- [x] Draft methodology section. `PERFORMANCE.md` §1 — per-metric thread/source/cadence table + rationale for each measurement choice.
+- [ ] Capture before/after numbers from Story 4.1. Doc has TODO placeholders + capture protocol; needs a release-style build session.
+- [x] Write trade-off section. `PERFORMANCE.md` §4 — per-frame `runOnJS` cost vs. unreliable shared-value array mutation. Chose correctness over a marginal idle saving.
 
 ### Story 5.3 — Demo recording
 
