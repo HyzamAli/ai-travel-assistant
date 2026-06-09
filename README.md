@@ -43,6 +43,10 @@ Jotai was the closest second — atomic granularity is excellent for chat token 
 
 `Bundle` is a placeholder type today; Story 1.1 fleshes it out. `Message` already matches the FR2.3/FR2.4 shape so Story 2.x can wire straight in.
 
+## Bottom-sheet keyboard behavior
+
+The Ask Crew AI sheet has two snaps: **peek (50%)** and **full (92%)**. The composer's `BottomSheetTextInput` (gorhom) plus the sheet's `keyboardBehavior='interactive'` / `keyboardBlurBehavior='restore'` rides the footer above the keyboard at either snap — focusing the input at peek lifts the input above the keyboard without changing the sheet's index, and dismissing the keyboard restores the prior position. No bespoke focus or inset code was needed.
+
 ## See also
 
 - [`requirements.md`](./requirements.md) — extracted FR/NFR spec

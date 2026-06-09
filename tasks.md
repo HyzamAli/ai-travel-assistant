@@ -179,9 +179,9 @@ Legend: `[ ]` open · `[x]` done · `(FRx.y)` ties to a requirement.
 - No layout shift on iOS notch / Android nav bars.
 
 **Tasks**
-- [ ] Use `BottomSheetTextInput` from `@gorhom/bottom-sheet` (handles keyboard offset).
+- [x] Use `BottomSheetTextInput` from `@gorhom/bottom-sheet` (handles keyboard offset). Wired in 2.2; sheet sets `keyboardBehavior='interactive'` and `keyboardBlurBehavior='restore'`.
 - [ ] Test on both platforms.
-- [ ] Decide peek+keyboard behavior; document in README.
+- [x] Decide peek+keyboard behavior; document in README. Behavior at peek: `BottomSheetTextInput` + `keyboardBehavior='interactive'` already lifts the input above the keyboard without changing the sheet's snap index. No auto-snap or inset gymnastics needed — kept the composer minimal.
 
 ---
 
