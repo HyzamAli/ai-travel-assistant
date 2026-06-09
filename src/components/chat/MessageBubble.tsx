@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View } from 'react-native';
 
-import { TypingDots } from '@/components/TypingDots';
+import { TypingDots } from '@/components/chat/TypingDots';
 import type { Message } from '@/store/chatStore';
 
 type Props = { message: Message };

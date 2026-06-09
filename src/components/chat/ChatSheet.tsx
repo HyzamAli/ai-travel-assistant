@@ -12,8 +12,8 @@ import { StyleSheet, Text, View } from 'react-native';
 import type { SharedValue } from 'react-native-reanimated';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
-import { ChatComposer } from '@/components/ChatComposer';
-import { MessageBubble } from '@/components/MessageBubble';
+import { ChatComposer } from '@/components/chat/ChatComposer';
+import { MessageBubble } from '@/components/chat/MessageBubble';
 import { useChatStore, type Message } from '@/store/chatStore';
 
 type Props = {
@@ -41,7 +41,7 @@ const renderItem = ({ item }: { item: Message }) => (
 );
 const keyExtractor = (m: Message) => m.id;
 
-export const AiSheet = forwardRef<BottomSheetModal, Props>(function AiSheet(
+export const ChatSheet = forwardRef<BottomSheetModal, Props>(function ChatSheet(
   { animatedIndex },
   ref,
 ) {
