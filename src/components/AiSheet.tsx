@@ -47,7 +47,15 @@ export const AiSheet = forwardRef<BottomSheetModal, Props>(function AiSheet(
 ) {
   const insets = useSafeAreaInsets();
   const messages = useChatStore((s) => s.messages);
+  // Track the last message's content length so auto-scroll keeps following as
+  // streamed tokens append — `messages.length` alone stays fixed during a
+  // stream and the list would stop pinning to the bottom.
+  const lastContentLen = useChatStore((s) => {
+    const last = s.messages[s.messages.length - 1];
+    return last ? last.content.length : 0;
+  });
   const listRef = useRef<FlashListRef<Message>>(null);
+  const prevMessageCount = useRef(0);
 
   // Reserve worst-case composer height (input maxHeight 120 + row paddings + hairline
   // ≈ 152) + safe area, so the last message clears the footer even when the user
@@ -63,12 +71,16 @@ export const AiSheet = forwardRef<BottomSheetModal, Props>(function AiSheet(
 
   useEffect(() => {
     if (messages.length === 0) return;
-    // Defer one tick so the new item is laid out before we scroll.
+    // Animate the scroll on length-change (one-shot user send) but not on
+    // content-only growth (streaming) — easing fights frame-by-frame token
+    // growth and looks worse than instant pinning.
+    const isNewMessage = messages.length !== prevMessageCount.current;
+    prevMessageCount.current = messages.length;
     const id = setTimeout(() => {
-      listRef.current?.scrollToEnd({ animated: true });
+      listRef.current?.scrollToEnd({ animated: isNewMessage });
     }, 30);
     return () => clearTimeout(id);
-  }, [messages.length]);
+  }, [messages.length, lastContentLen]);
 
   return (
     <BottomSheetModal

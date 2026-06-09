@@ -5,15 +5,25 @@ import { Pressable, StyleSheet, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { sendUserMessage } from '@/services/chat';
+import { useChatStore } from '@/store/chatStore';
 
 export function ChatComposer() {
   const insets = useSafeAreaInsets();
   const [draft, setDraft] = useState('');
-  const canSend = draft.trim().length > 0;
+  const isStreaming = useChatStore((s) => s.isStreaming);
+  const canSend = draft.trim().length > 0 && !isStreaming;
 
   function handleSend() {
     if (!canSend) return;
-    sendUserMessage(draft);
+    // sendUserMessage catches its own errors and routes them into the message
+    // list as an 'error' bubble. The trailing .catch is defence-in-depth so a
+    // bug in that handler can't become an unhandled rejection.
+    sendUserMessage(draft).catch((err) => {
+      if (__DEV__) {
+        // eslint-disable-next-line no-console
+        console.error('[chat] sendUserMessage rejected', err);
+      }
+    });
     setDraft('');
   }
 

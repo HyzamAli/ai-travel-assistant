@@ -146,10 +146,10 @@ Legend: `[ ]` open · `[x]` done · `(FRx.y)` ties to a requirement.
 - Auto-scroll to latest message.
 
 **Tasks**
-- [ ] Define `Message` type & chat store (chosen state lib).
-- [ ] Build `MessageList` (FlashList inside BottomSheetScrollView or `BottomSheetFlashList`).
-- [ ] Build `MessageBubble` (user vs assistant variants).
-- [ ] Send-message action: append user msg → kick off assistant response.
+- [x] Define `Message` type & chat store (chosen state lib). `Message = { id, role, content, status }` with status `'sending' | 'streaming' | 'done'` ready for 2.3.
+- [x] Build `MessageList` — `BottomSheetFlashList` inside the sheet body; module-scope `renderItem`/`keyExtractor`. Auto-scroll on `messages.length` via deferred `scrollToEnd`.
+- [x] Build `MessageBubble` (user vs assistant variants). Stub for `sending` state lands in 2.3.
+- [x] Send-message action: `sendUserMessage(prompt)` in `services/chat.ts` appends user msg, flips `isStreaming`, fires a canned reply via `setTimeout` (stub — 2.3 replaces with real streaming).
 
 ### Story 2.3 — Progressive (streamed) assistant responses
 **As a user, I want the assistant's reply to appear progressively so it feels alive.** (FR2.4)
@@ -160,10 +160,15 @@ Legend: `[ ]` open · `[x]` done · `(FRx.y)` ties to a requirement.
 - Streaming + feed scroll simultaneously produces no visible jank. (NFR1)
 
 **Tasks**
-- [ ] Implement `mockStreamReply(prompt)` async generator yielding tokens with jitter.
-- [ ] Batch token appends (e.g. flush every 16ms) to avoid 1-render-per-token storms.
-- [ ] Loading indicator component (typing dots) shown until first token.
-- [ ] **Stretch:** wire Anthropic SDK with API key from `expo-constants`; gate behind env flag.
+- [x] Implement `mockStreamReply(prompt)` async generator yielding word tokens with 30–90 ms jitter. Library of 5 travel-flavoured canned replies in `services/mockStream.ts`.
+- [x] Batch token appends — accumulator + `setTimeout(flush, 16)` gate in `services/chat.ts`. First token flushes immediately for a crisp dots→text swap; subsequent tokens batch.
+- [x] Loading indicator (`TypingDots`) shown while assistant message status is `'sending'`. Three staggered Reanimated opacity loops on the UI thread, no React re-renders.
+- [ ] **Stretch:** wire Anthropic SDK with API key from `expo-constants`; gate behind env flag. *(Deferred — revisit after Epic 3 if there's slack.)*
+
+**Follow-ons (not in spec but added during impl):**
+- AiSheet auto-scroll now follows last-message content growth, not just `messages.length`, so the list stays pinned during a stream. Uses `animated: false` during streaming.
+- ChatComposer subscribes to `isStreaming` and disables send while a reply is in flight — prevents overlapping streams without an error toast.
+- `sendUserMessage` early-returns if `isStreaming` (defence in depth behind the disabled button).
 
 ### Story 2.4 — Keyboard-aware input
 **As a user typing on the keyboard, I want the input to stay visible at full height.** (FR2.6)
