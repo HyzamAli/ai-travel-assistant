@@ -98,7 +98,6 @@ export async function sendUserMessage(prompt: string): Promise<void> {
     clearTimer();
     if (__DEV__) {
       // Surfaced for the developer; user sees the in-bubble error below.
-      // eslint-disable-next-line no-console
       console.error('[chat] stream failed', err);
     }
     useChatStore.getState().updateMessage(assistantId, {

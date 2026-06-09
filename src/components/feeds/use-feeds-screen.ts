@@ -14,8 +14,7 @@ export function useFeedsScreen() {
 
   const sheetRef = useRef<BottomSheetModal>(null);
 
-  const load = useCallback(() => {
-    setStatus('loading');
+  const fetchBundles = useCallback(() => {
     getBundles()
       .then((data) => {
         setBundles(data);
@@ -24,9 +23,14 @@ export function useFeedsScreen() {
       .catch(() => setStatus('error'));
   }, [setBundles]);
 
+  const load = useCallback(() => {
+    setStatus('loading');
+    fetchBundles();
+  }, [fetchBundles]);
+
   useEffect(() => {
-    if (bundles.length === 0) load();
-  }, [bundles.length, load]);
+    if (bundles.length === 0) fetchBundles();
+  }, [bundles.length, fetchBundles]);
 
   const openChatSheet = useCallback(() => {
     sheetRef.current?.present();

@@ -91,17 +91,17 @@ export function usePerfFpsSampler() {
     return () => cancelAnimationFrame(rafId);
   }, [jsBusy]);
 
-  const resetBadFrameCount = useCallback(() => {
+  const resetBadFrameCount = () => {
     badFrameCount.value = 0;
-  }, [badFrameCount]);
+  };
 
-  const startSummarySession = useCallback(() => {
+  const startSummarySession = () => {
     sessionActive.value = true;
-  }, [sessionActive]);
+  };
 
-  const stopSummarySession = useCallback(() => {
+  const stopSummarySession = () => {
     sessionActive.value = false;
-  }, [sessionActive]);
+  };
 
   const resetSummarySession = useCallback(() => {
     ringBufferRef.current = new Float64Array(SUMMARY_RING_SIZE);

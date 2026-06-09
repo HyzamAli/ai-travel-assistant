@@ -38,7 +38,7 @@ export function FeedsScreen() {
   if (status === 'error') {
     return (
       <View style={[styles.container, styles.centered]}>
-        <Text style={styles.body}>Couldn't load trips.</Text>
+        <Text style={styles.body}>Couldn&apos;t load trips.</Text>
         <Pressable onPress={load} style={styles.retry}>
           <Text style={styles.link}>Tap to retry</Text>
         </Pressable>

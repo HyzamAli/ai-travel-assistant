@@ -34,7 +34,6 @@ function MetricText<T extends string | number>({
       pointerEvents='none'
       underlineColorAndroid='transparent'
       style={style}
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       animatedProps={animatedProps as any}
     />
   );
@@ -57,7 +56,6 @@ function JsBusyLabel({
       pointerEvents='none'
       underlineColorAndroid='transparent'
       style={style}
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       animatedProps={animatedProps as any}
     />
   );
