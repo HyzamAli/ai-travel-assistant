@@ -1,11 +1,10 @@
-import { Ionicons } from '@expo/vector-icons';
-import { BottomSheetTextInput } from '@gorhom/bottom-sheet';
-import { useState } from 'react';
-import { Pressable, StyleSheet, View } from 'react-native';
-import { useSafeAreaInsets } from 'react-native-safe-area-context';
-
 import { sendUserMessage } from '@/services/chat';
 import { useChatStore } from '@/store/chatStore';
+import { Ionicons } from '@expo/vector-icons';
+import { BottomSheetTextInput } from '@gorhom/bottom-sheet';
+import { useCallback, useState } from 'react';
+import { Pressable, StyleSheet, View } from 'react-native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 export function ChatComposer() {
   const insets = useSafeAreaInsets();
@@ -13,19 +12,11 @@ export function ChatComposer() {
   const isStreaming = useChatStore((s) => s.isStreaming);
   const canSend = draft.trim().length > 0 && !isStreaming;
 
-  function handleSend() {
+  const handleSend = useCallback(() => {
     if (!canSend) return;
-    // sendUserMessage catches its own errors and routes them into the message
-    // list as an 'error' bubble. The trailing .catch is defence-in-depth so a
-    // bug in that handler can't become an unhandled rejection.
-    sendUserMessage(draft).catch((err) => {
-      if (__DEV__) {
-        // eslint-disable-next-line no-console
-        console.error('[chat] sendUserMessage rejected', err);
-      }
-    });
+    sendUserMessage(draft);
     setDraft('');
-  }
+  }, [draft, canSend]);
 
   return (
     <View style={[styles.row, { paddingBottom: 12 + insets.bottom }]}>

@@ -1,11 +1,10 @@
+import type { DayHighlight } from '@/types/bundle';
 import { Ionicons } from '@expo/vector-icons';
 import { ScrollView, StyleSheet, Text, View } from 'react-native';
 
-import type { DayHighlight } from '@/types/bundle';
+type DayHighlightRowProps = { highlights: DayHighlight[] };
 
-type Props = { highlights: DayHighlight[] };
-
-export function DayHighlightsRow({ highlights }: Props) {
+export function DayHighlightsRow({ highlights }: DayHighlightRowProps) {
   return (
     <ScrollView
       horizontal
@@ -14,7 +13,7 @@ export function DayHighlightsRow({ highlights }: Props) {
     >
       {highlights.map((h) => (
         <View key={h.iconName} style={styles.chip}>
-          <Ionicons name={h.iconName} size={14} color="#334155" />
+          <Ionicons name={h.iconName} size={14} color='#334155' />
           <Text style={styles.text}>{h.title}</Text>
         </View>
       ))}

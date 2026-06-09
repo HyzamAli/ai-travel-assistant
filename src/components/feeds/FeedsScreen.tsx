@@ -25,8 +25,7 @@ const ListHeader = () => (
 
 export function FeedsScreen() {
   const insets = useSafeAreaInsets();
-  const { status, bundles, sheetRef, sheetIndex, load, openChatSheet } =
-    useFeedsScreen();
+  const { status, bundles, sheetRef, load, openChatSheet } = useFeedsScreen();
 
   if (status === 'loading') {
     return (
@@ -56,8 +55,8 @@ export function FeedsScreen() {
         ListHeaderComponent={ListHeader}
         contentContainerStyle={{ paddingBottom: insets.bottom + 88 }}
       />
-      <Fab onPress={openChatSheet} sheetIndex={sheetIndex} />
-      <ChatSheet ref={sheetRef} animatedIndex={sheetIndex} />
+      <Fab onPress={openChatSheet} />
+      <ChatSheet ref={sheetRef} />
     </View>
   );
 }

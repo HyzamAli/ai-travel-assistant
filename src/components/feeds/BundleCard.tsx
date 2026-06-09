@@ -1,3 +1,7 @@
+import { DayHighlightsRow } from '@/components/feeds/DayHighlightsRow';
+import { useFeedStore } from '@/store/feedStore';
+import type { Bundle, TripType } from '@/types/bundle';
+import { TRIP_TYPE_LABEL, formatDuration, formatPrice } from '@/utils/format';
 import { Ionicons } from '@expo/vector-icons';
 import { Image } from 'expo-image';
 import { LinearGradient } from 'expo-linear-gradient';
@@ -15,41 +19,33 @@ import Animated, {
   useSharedValue,
   withTiming,
 } from 'react-native-reanimated';
-
-import { DayHighlightsRow } from '@/components/feeds/DayHighlightsRow';
-import { useFeedStore } from '@/store/feedStore';
-import type { Bundle, TripType } from '@/types/bundle';
 import {
-  TRIP_TYPE_LABEL,
-  formatDuration,
-  formatPrice,
-} from '@/utils/format';
-
-type Props = { bundle: Bundle };
+  GRADIENT_COLORS,
+  GRADIENT_END,
+  GRADIENT_START,
+} from './feeds-constants';
+type BundleCardProps = { bundle: Bundle };
 
 function handlePress(id: string) {
   useFeedStore.getState().toggleExpanded(id);
 }
 
-export function BundleCard({ bundle }: Props) {
+export function BundleCard({ bundle }: BundleCardProps) {
   const isExpanded = useFeedStore((s) => s.expandedId === bundle.id);
   const progress = useSharedValue(isExpanded ? 1 : 0);
 
   useEffect(() => {
-    progress.value = withTiming(isExpanded ? 1 : 0, { duration: 220 });
+    progress.value = withTiming(isExpanded ? 1 : 0, { duration: 200 });
   }, [isExpanded, progress]);
 
   const detailsStyle = useAnimatedStyle(() => ({
-    height: progress.value * DETAILS_HEIGHT,
+    height: progress.value * 70,
     opacity: progress.value,
   }));
 
   return (
     <View style={styles.card}>
-      <Pressable
-        onPress={() => handlePress(bundle.id)}
-        android_ripple={ANDROID_RIPPLE}
-      >
+      <Pressable onPress={() => handlePress(bundle.id)}>
         <View style={styles.imageWrap}>
           <LinearGradient
             colors={GRADIENT_COLORS}
@@ -58,17 +54,17 @@ export function BundleCard({ bundle }: Props) {
             style={StyleSheet.absoluteFill}
           />
           <Ionicons
-            name="compass-outline"
+            name='compass-outline'
             size={36}
-            color="#64748B"
+            color='#64748B'
             accessibilityElementsHidden
-            importantForAccessibility="no-hide-descendants"
+            importantForAccessibility='no-hide-descendants'
           />
           <Image
             source={bundle.heroImageUrl}
             style={StyleSheet.absoluteFill}
-            contentFit="cover"
-            cachePolicy="memory-disk"
+            contentFit='cover'
+            cachePolicy='memory-disk'
             recyclingKey={bundle.id}
             transition={300}
           />
@@ -86,7 +82,9 @@ export function BundleCard({ bundle }: Props) {
             </Text>
           </View>
           <View style={styles.row}>
-            <Text style={styles.duration}>{formatDuration(bundle.duration)}</Text>
+            <Text style={styles.duration}>
+              {formatDuration(bundle.duration)}
+            </Text>
             <Text style={styles.price}>{formatPrice(bundle.price.amount)}</Text>
           </View>
         </View>
@@ -98,21 +96,10 @@ export function BundleCard({ bundle }: Props) {
   );
 }
 
-const IMAGE_HEIGHT = 190;
-const CARD_RADIUS = 14;
-const DETAILS_HEIGHT = 68;
-
-const ANDROID_RIPPLE = { color: 'rgba(0,0,0,0.08)' } as const;
-
-// Frozen tuples so LinearGradient props don't allocate per render.
-const GRADIENT_COLORS = ['#DBEAFE', '#FFFFFF'] as const;
-const GRADIENT_START = { x: 0, y: 0 } as const;
-const GRADIENT_END = { x: 1, y: 1 } as const;
-
 const styles = StyleSheet.create({
   card: {
     backgroundColor: '#FFFFFF',
-    borderRadius: CARD_RADIUS,
+    borderRadius: 14,
     marginHorizontal: 16,
     marginBottom: 16,
     overflow: 'hidden',
@@ -124,7 +111,7 @@ const styles = StyleSheet.create({
   },
   imageWrap: {
     width: '100%',
-    height: IMAGE_HEIGHT,
+    height: 190,
     alignItems: 'center',
     justifyContent: 'center',
     overflow: 'hidden',

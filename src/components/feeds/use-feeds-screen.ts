@@ -1,9 +1,7 @@
-import type { BottomSheetModal } from '@gorhom/bottom-sheet';
-import { useCallback, useEffect, useRef, useState } from 'react';
-import { useSharedValue } from 'react-native-reanimated';
-
 import { getBundles } from '@/services/bundles';
 import { useFeedStore } from '@/store/feedStore';
+import type { BottomSheetModal } from '@gorhom/bottom-sheet';
+import { useCallback, useEffect, useRef, useState } from 'react';
 
 type Status = 'loading' | 'ready' | 'error';
 
@@ -15,7 +13,6 @@ export function useFeedsScreen() {
   );
 
   const sheetRef = useRef<BottomSheetModal>(null);
-  const sheetIndex = useSharedValue(-1);
 
   const load = useCallback(() => {
     setStatus('loading');
@@ -33,7 +30,7 @@ export function useFeedsScreen() {
 
   const openChatSheet = useCallback(() => {
     sheetRef.current?.present();
-  }, [sheetIndex]);
+  }, []);
 
-  return { status, bundles, sheetRef, sheetIndex, load, openChatSheet };
+  return { status, bundles, sheetRef, load, openChatSheet };
 }
