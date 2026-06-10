@@ -5,6 +5,11 @@ import { useEffect, useRef } from 'react';
 
 export function useChatSheet() {
   const messages = useChatStore((s) => s.messages);
+  const isStreaming = useChatStore((s) => s.isStreaming);
+  //used to determine if LoadingBubble should be shown and if auto-scroll should be smooth
+  const lastRole = useChatStore((s) => s.messages[s.messages.length - 1]?.role);
+  const isLoading = isStreaming && lastRole !== 'assistant';
+
   const listRef = useRef<FlashListRef<Message>>(null);
   const prevMessageCount = useRef(0);
 
@@ -15,15 +20,16 @@ export function useChatSheet() {
   });
 
   useEffect(() => {
-    if (messages.length === 0) return;
-    //ensures that list auto-scrolls for new messages, as well as new tokens for existing streaming messages
+    if (messages.length === 0 && !isLoading) return;
+    //ensures that list auto-scrolls for new messages, new tokens for streaming
+    //messages, and when the LoadingBubble footer appears/disappears
     const isNewMessage = messages.length !== prevMessageCount.current;
     prevMessageCount.current = messages.length;
     const id = setTimeout(() => {
       listRef.current?.scrollToEnd({ animated: isNewMessage });
     }, 30);
     return () => clearTimeout(id);
-  }, [messages.length, lastContentLen]);
+  }, [messages.length, lastContentLen, isLoading]);
 
-  return { messages, listRef };
+  return { messages, listRef, isLoading };
 }

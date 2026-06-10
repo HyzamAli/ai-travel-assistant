@@ -15,8 +15,7 @@ function pickReply(): string {
 }
 
 function tokenize(text: string): string[] {
-  // Split into word-with-trailing-space tokens so concatenation rebuilds the
-  // original string exactly. Final word has no trailing space.
+  //split words into tokens with trailing space (except last token)
   const tokens: string[] = [];
   const parts = text.split(' ');
   for (let i = 0; i < parts.length; i += 1) {
@@ -29,13 +28,20 @@ function delay(ms: number): Promise<void> {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
+const FIRST_TOKEN_DELAY_MIN_MS = 600;
+const FIRST_TOKEN_DELAY_MAX_MS = 1400;
+
 export async function* mockStreamReply(
   _prompt: string,
 ): AsyncGenerator<string, void, void> {
+  //simulare network delay before the first token arrives
+  await delay(
+    FIRST_TOKEN_DELAY_MIN_MS +
+      Math.random() * (FIRST_TOKEN_DELAY_MAX_MS - FIRST_TOKEN_DELAY_MIN_MS),
+  );
   const tokens = tokenize(pickReply());
   for (const token of tokens) {
-    // 30–90ms jitter per token. Snappy enough to feel responsive, slow enough
-    // to read as progressive rather than instantaneous.
+    // simulate delay for each token
     await delay(30 + Math.random() * 60);
     yield token;
   }

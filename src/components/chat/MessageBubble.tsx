@@ -1,4 +1,3 @@
-import { TypingDots } from '@/components/chat/TypingDots';
 import { Message } from '@/types/message';
 import { StyleSheet, Text, View } from 'react-native';
 
@@ -6,7 +5,6 @@ type MessageBubbleProps = { message: Message };
 
 export function MessageBubble({ message }: MessageBubbleProps) {
   const isUser = message.role === 'user';
-  const isWaiting = message.status === 'sending';
   const isError = message.status === 'error';
 
   let bubbleStyle = isUser ? styles.userBubble : styles.assistantBubble;
@@ -19,11 +17,7 @@ export function MessageBubble({ message }: MessageBubbleProps) {
   return (
     <View style={isUser ? styles.userRow : styles.assistantRow}>
       <View style={bubbleStyle}>
-        {isWaiting ? (
-          <TypingDots />
-        ) : (
-          <Text style={textStyle}>{message.content}</Text>
-        )}
+        <Text style={textStyle}>{message.content}</Text>
       </View>
     </View>
   );

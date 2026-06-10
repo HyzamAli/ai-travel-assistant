@@ -5,9 +5,7 @@ const FLUSH_MS = 16;
 const EMPTY_REPLY_MESSAGE = 'Hmm, no reply came through. Try again?';
 const ERROR_REPLY_MESSAGE = 'Something went wrong reaching the assistant.';
 
-// Monotonic counter so two IDs minted in the same Date.now() tick can't
-// collide. Replaces a 4-char Math.random suffix which had a ~1-in-1.6M
-// collision window per pair.
+// Monotonic counter
 let idCounter = 0;
 
 function nextId(prefix: string): string {
@@ -23,7 +21,6 @@ export async function sendUserMessage(prompt: string): Promise<void> {
   if (store.isStreaming) return;
 
   const userId = nextId('u');
-  const assistantId = nextId('a');
 
   store.appendMessage({
     id: userId,
@@ -31,25 +28,18 @@ export async function sendUserMessage(prompt: string): Promise<void> {
     content: trimmed,
     status: 'done',
   });
-  store.appendMessage({
-    id: assistantId,
-    role: 'assistant',
-    content: '',
-    status: 'sending',
-  });
   store.setStreaming(true);
 
+  let assistantId: string | null = null;
   let buffer = '';
   let flushed = '';
-  let firstToken = true;
   let timer: ReturnType<typeof setTimeout> | null = null;
 
   // Batched flush — at most one React update per ~16ms regardless of how many
-  // tokens arrive in that window. Without this, each token = one Zustand set =
-  // one bubble re-measure in FlashList.
+  // tokens arrive in that window.
   function flush() {
     timer = null;
-    if (buffer === flushed) return;
+    if (assistantId === null || buffer === flushed) return;
     flushed = buffer;
     useChatStore
       .getState()
@@ -71,21 +61,27 @@ export async function sendUserMessage(prompt: string): Promise<void> {
   try {
     for await (const token of mockStreamReply(trimmed)) {
       buffer += token;
-      if (firstToken) {
-        // Flush the first token immediately so dots → text feels crisp; further
-        // tokens fall through the 16ms batcher.
-        firstToken = false;
-        clearTimer();
-        flush();
+      if (assistantId === null) {
+        // First token: append the assistant bubble seeded with this token
+        assistantId = nextId('a');
+        flushed = buffer;
+        useChatStore.getState().appendMessage({
+          id: assistantId,
+          role: 'assistant',
+          content: buffer,
+          status: 'streaming',
+        });
       } else {
         schedule();
       }
     }
     clearTimer();
-    if (firstToken) {
-      // Zero tokens yielded — render a friendly empty-reply state instead of a
-      // permanently blank assistant bubble.
-      useChatStore.getState().updateMessage(assistantId, {
+    if (assistantId === null) {
+      // Zero tokens yielded — append a friendly empty-reply bubble so the user
+      // sees something land instead of LoadingBubble disappearing silently.
+      useChatStore.getState().appendMessage({
+        id: nextId('a'),
+        role: 'assistant',
         content: EMPTY_REPLY_MESSAGE,
         status: 'error',
       });
@@ -100,10 +96,19 @@ export async function sendUserMessage(prompt: string): Promise<void> {
       // Surfaced for the developer; user sees the in-bubble error below.
       console.error('[chat] stream failed', err);
     }
-    useChatStore.getState().updateMessage(assistantId, {
-      content: buffer || ERROR_REPLY_MESSAGE,
-      status: 'error',
-    });
+    if (assistantId === null) {
+      useChatStore.getState().appendMessage({
+        id: nextId('a'),
+        role: 'assistant',
+        content: ERROR_REPLY_MESSAGE,
+        status: 'error',
+      });
+    } else {
+      useChatStore.getState().updateMessage(assistantId, {
+        content: buffer || ERROR_REPLY_MESSAGE,
+        status: 'error',
+      });
+    }
   } finally {
     useChatStore.getState().setStreaming(false);
   }

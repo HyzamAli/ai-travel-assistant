@@ -1,5 +1,6 @@
 import { ChatComposer } from '@/components/chat/ChatComposer';
 import { MessageBubble } from '@/components/chat/MessageBubble';
+import { LoadingBubble } from '@/components/chat/LoadingBubble';
 import { useChatSheet } from '@/components/chat/use-chat-sheet';
 import { BottomSheet } from '@/components/modal/BottomSheet';
 import { Message } from '@/types/message';
@@ -35,7 +36,7 @@ const EmptyState = () => (
 export const ChatSheet = forwardRef<BottomSheetModal>(
   function ChatSheet(_props, ref) {
     const insets = useSafeAreaInsets();
-    const { messages, listRef } = useChatSheet();
+    const { messages, listRef, isLoading } = useChatSheet();
     const [footerHeight, setFooterHeight] = useState(0);
     const animatedIndex = useSharedValue(-1);
 
@@ -72,6 +73,7 @@ export const ChatSheet = forwardRef<BottomSheetModal>(
             keyExtractor={keyExtractor}
             contentContainerStyle={listContentStyle}
             ListEmptyComponent={EmptyState}
+            ListFooterComponent={isLoading ? LoadingBubble : undefined}
           />
         </Animated.View>
       </BottomSheet>
